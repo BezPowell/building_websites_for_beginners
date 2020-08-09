@@ -1,0 +1,38 @@
+# Introduction
+This book aims to provide a gentle introduction to building websites from scratch for the complete beginner; someone who is comfortable browsing the web and navigating their way around websites, but who has never tried to edit a webpage and knows nothing about the technologies that make them work. The only knowledge that I assume you will have is being able to open a browser and navigate to a web page and knowing how to create, edit and save documents with a computer text editor. Everything else will be explained as we go along.
+
+## What we'll cover
+Over the course of this book I hope to introduce you to HTML, CSS and JS, the 'languages' of the web and show you how to use them to build simple web sites. If the mere mention of acronyms like these makes your eyes start to glaze over, don't worry, all will be explained and by the time you get to the end these should be as familiar as terms you use in your everyday life.
+
+The best way to learn how to do something is to actually do it, and websites are no exception. We'll create two simple websites over the course of the book: a single-page portfolio website that we'll slowly develop as we go along, adding pieces as we learn the concepts behind them; and a final project which will be a rather more complex blog website that will bring together much of what we've learned earlier as well as introducing some new techniques.
+
+## Why read this book?
+There is a wealth of high quality material available on the web and in book form for those who are interested in learning to build websites, much of it written by people far more knowledgeable and experienced than myself; with that confession out of the way it may seem strange to write another guide when there are already so many available, but my reasons for doing this have a lot to do with the history of the web itself<sup id="a1">[1](#f1)</sup>.
+
+The web has not always been like it is now. When it first came into being at CERN during the 1990s web pages consisted of little more than text and a few images. Humans being humans, however, people soon started trying to build things on the web that it had not originally been designed with in mind. As developer's imaginations rapidly oustripped the limited tools available in the original specifications, they had to resort to various hacks and workarounds to try and implement them. Over the years, as certain trends became more common place, web browsers (and those who write the specifications that govern the web) started to offer more sophisticated tools to create them.
+
+The result of this process of evolution is that there are often multiple ways of achieving the same goal when it comes to building websites. Many existing books and tutorials teach these in the same way that the person writing them would have learnt them; starting with the early workarounds and only teaching the newer, purpose-built techniques when you have mastered the old way of doing things.
+
+For me personally, when I came to learn web development and later to teach it to others, this always felt a little backwards as the newer techniques are often quicker to pick up (even if they may seem a little counter-intuitive to someone who is used to the more established ways of doing things) and can result in websites which are quicker to load and easier to modify in the future.
+
+With that in mind, that is how the book will progress, teaching you contemporary ways of doing things<sup id="a2">[2](#f2)</sup> wherever possible, and only mentioning older workarounds where it seems necessary. With that introduction out of the way, let's get started.
+
+## What you'll need
+One of the best bits of building websites is that the tools required are very simple indeed. All of the languages of the web mentioned earlier are text based, just like written human languages. So to create websites all you need is a text editor<sup id="a3">[3](#f3)</sup> and a web browser to view it in.
+
+Whatever is the default text editor your operating system comes with will be sufficient (e.g. notepad on Windows, often gedit on Linux etc.). However, there are dedicated text editors designed for programming and web development which come with a variety of features will make your life easier as they can highlight mistakes and cut down on repetitive typing. I personally use a free editor called [VSCode](https://code.visualstudio.com/), but [Atom](https://atom.io/) and [Brackets](http://brackets.io/) are also very good choices.
+
+While technically it may well be possible to follow along with these tutorials on a phone or tablet, the experience is likely to be anything but pleasant. Web development involves a lot of typing and switching between windows, which is not something mobile devices are really designed for. In light of this, I do highly recommend you follow these tutorials on a desktop or laptop as it will make your life much easier. However, I make no assumptions on what type of device this will be, or the operating system that you run on it, use whatever you are most comfortable with.
+
+## A note on feedback
+I'm writing this book in the open, and all the source files used to create it can be found on github. If you spot a spelling mistake, typo, or gross technical inaccuracy and would like to correct it please feel free to open a pull request with a correction and admonishment appropriate to the level of my transgression.
+
+Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to [bez@pinopticon.net](mailto:bez@pinopticon.net) with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.
+
+---
+
+<ol class="footnotes">
+<li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
+<li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
+<li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
+</ol>
