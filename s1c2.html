@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tags and Elements - Building Websites for Beginners</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html" class="active"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Building Websites for Beginners</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#tags-and-elements" id="tags-and-elements">Tags and Elements</a></h1>
+<p>Web pages are just specially formatted text files. As alluded to in the previous chapter, the web browser needs to know what form the various pieces of content take in order to reconstruct the page for display or reading out. This is achieved through the use of tags. Here's a simple example:</p>
+<pre><code>&lt;h3&gt;I like cats&lt;/h3&gt;
+&lt;p&gt;I like cats&lt;/p&gt;
+</code></pre>
+<p>Above you can see two identical lines of text, surrounded on either side by a series of strange looking characters. When the browser comes to actually display the page they will look like this.</p>
+<figure>
+<h3><a class="header" href="#i-like-cats" id="i-like-cats">I like cats</a></h3>
+<p>I like cats</p>
+</figure>
+<p>The characters on either side of the line of text are the tags. The opening <code>&lt;</code> and closing <code>&gt;</code> angle brackets denote that this is a tag as opposed to actual content and the letters and/or numbers in between determine the type of tag it is (its identifier). In the example above the first line is a level 3 heading (html has 6 levels of heading of differing importance, <code>h1</code> being the most important and <code>h6</code> the least) and the second is a paragraph.</p>
+<p>When the browser comes to process the html file it will see the opening tag (e.g. <code>&lt;h3&gt;</code>) and know that everything following it until the closing tag (e.g. <code>&lt;/h3&gt;</code>) is the same type of content. The backslash <code>/</code> directly following the opening bracket of the second tag denotes that it is a closing, rather than opening, tag.</p>
+<p>The whole section of text including the opening and closing tags, as well as the content in between them, is referred to as an element. In this case the first line is a <code>h3</code> element and the second a <code>p</code> element. A web page is just a collection of different elements.</p>
+<h2><a class="header" href="#element-relationships" id="element-relationships">Element relationships</a></h2>
+<p>Elements don't have to proceed purely one after another, however, and can be nested inside one another to represent complex relationships. These relationships are very much like those you have with other members of your family, and thus share similar names with them. Any elements added in between the opening and closing tags of an element become 'descendants' of that element and will become associated with it. Time for another example:</p>
+<pre><code>&lt;p&gt;Todo list&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;Wake up&lt;/li&gt;
+    &lt;li&gt;Have breakfast&lt;/li&gt;
+    &lt;li&gt;Learn more about HTML&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>What we have here is a series of <code>li</code> elements, nested inside an <code>ol</code> element. An <code>ol</code> is an ordered list, and <code>li</code> stands for list item. Here the <code>ol</code> is the parent of the <code>li</code> elements, which are in turn siblings of one another.</p>
+<p>When rendered by the browser, the above html will look like this:</p>
+<figure>
+<p>Todo list</p>
+<ol>
+    <li>Wake up</li>
+    <li>Have breakfast</li>
+    <li>Learn more about HTML</li>
+</ol>
+</figure>
+<p>The advantage of being able to form relationships between elements like this is it brings additional context to information. Here we can see that not only are the <code>li</code> elements items in a list, but they are all members of the same list and should be processed in a particular order. Consider another example:</p>
+<pre><code>&lt;p&gt;Todo list&lt;/p&gt;
+&lt;ol&gt;
+   &lt;li&gt;Wake up&lt;/li&gt;
+   &lt;li&gt;Have breakfast&lt;/li&gt;
+   &lt;li&gt;Learn more about HTML&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My favourite foods&lt;/p&gt;
+&lt;ul&gt;
+   &lt;li&gt;Pizza&lt;/li&gt;
+   &lt;li&gt;Pasta&lt;/li&gt;
+   &lt;li&gt;Cake&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Here we have added another list after the first, in this case, however, it is an unordered list, or <code>ul</code>. While we now have 6 <code>li</code> elements, they are not all member's of the same list, and thus should be treated separately. Also, while the second list still represents related items, they do not have any particular ordering associated with them. Here's how the modified example appears when rendered by a browser:</p>
+<figure>
+<p>Todo list</p>
+<ol>
+    <li>Wake up</li>
+    <li>Have breakfast</li>
+    <li>Learn more about HTML</li>
+</ol>
+<p>My favourite foods</p>
+<ul>
+    <li>Pizza</li>
+    <li>Pasta</li>
+    <li>Cake</li>
+</ul>
+</figure>
+<p>There is no limit to the number of levels that elements can be nested, and most webpages will have a large number of different elements with complex relationships resembling the most well-researched family trees.</p>
+<p>We've covered quite a lot in this chapter, so don't worry if it doesn't all take first time. Even experienced web developers often need to go over new material several times before they fully understand it. As long as you comprehend the principles behind what you've just read you should be fine and shouldn't need to remember the specifics; it will become second nature soon enough.</p>
+<p>In the next chapter we'll look at our first web page.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="s1c1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="s1c3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="s1c1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="s1c3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

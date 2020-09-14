@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - Building Websites for Beginners</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Building Websites for Beginners</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>This book aims to provide a gentle introduction to building websites from scratch for the complete beginner; someone who is comfortable browsing the web and navigating their way around websites, but who has never tried to edit a webpage and knows nothing about the technologies that make them work. The only knowledge that I assume you will have is being able to open a browser and navigate to a web page and knowing how to create, edit and save documents with a computer text editor. Everything else will be explained as we go along.</p>
+<h2><a class="header" href="#what-well-cover" id="what-well-cover">What we'll cover</a></h2>
+<p>Over the course of this book I hope to introduce you to HTML, CSS and JS, the 'languages' of the web and show you how to use them to build simple web sites. If the mere mention of acronyms like these makes your eyes start to glaze over, don't worry, all will be explained and by the time you get to the end these should be as familiar as terms you use in your everyday life.</p>
+<p>The best way to learn how to do something is to actually do it, and websites are no exception. We'll create two simple websites over the course of the book: a single-page portfolio website that we'll slowly develop as we go along, adding pieces as we learn the concepts behind them; and a final project which will be a rather more complex blog website that will bring together much of what we've learned earlier as well as introducing some new techniques.</p>
+<h2><a class="header" href="#why-read-this-book" id="why-read-this-book">Why read this book?</a></h2>
+<p>There is a wealth of high quality material available on the web and in book form for those who are interested in learning to build websites, much of it written by people far more knowledgeable and experienced than myself; with that confession out of the way it may seem strange to write another guide when there are already so many available, but my reasons for doing this have a lot to do with the history of the web itself<sup id="a1"><a href="#f1">1</a></sup>.</p>
+<p>The web has not always been like it is now. When it first came into being at CERN during the 1990s web pages consisted of little more than text and a few images. Humans being humans, however, people soon started trying to build things on the web that it had not originally been designed with in mind. As developer's imaginations rapidly oustripped the limited tools available in the original specifications, they had to resort to various hacks and workarounds to try and implement them. Over the years, as certain trends became more common place, web browsers (and those who write the specifications that govern the web) started to offer more sophisticated tools to create them.</p>
+<p>The result of this process of evolution is that there are often multiple ways of achieving the same goal when it comes to building websites. Many existing books and tutorials teach these in the same way that the person writing them would have learnt them; starting with the early workarounds and only teaching the newer, purpose-built techniques when you have mastered the old way of doing things.</p>
+<p>For me personally, when I came to learn web development and later to teach it to others, this always felt a little backwards as the newer techniques are often quicker to pick up (even if they may seem a little counter-intuitive to someone who is used to the more established ways of doing things) and can result in websites which are quicker to load and easier to modify in the future.</p>
+<p>With that in mind, that is how the book will progress, teaching you contemporary ways of doing things<sup id="a2"><a href="#f2">2</a></sup> wherever possible, and only mentioning older workarounds where it seems necessary. With that introduction out of the way, let's get started.</p>
+<h2><a class="header" href="#what-youll-need" id="what-youll-need">What you'll need</a></h2>
+<p>One of the best bits of building websites is that the tools required are very simple indeed. All of the languages of the web mentioned earlier are text based, just like written human languages. So to create websites all you need is a text editor<sup id="a3"><a href="#f3">3</a></sup> and a web browser to view it in.</p>
+<p>Whatever is the default text editor your operating system comes with will be sufficient (e.g. notepad on Windows, often gedit on Linux etc.). However, there are dedicated text editors designed for programming and web development which come with a variety of features will make your life easier as they can highlight mistakes and cut down on repetitive typing. I personally use a free editor called <a href="https://code.visualstudio.com/">VSCode</a>, but <a href="https://atom.io/">Atom</a> and <a href="http://brackets.io/">Brackets</a> are also very good choices.</p>
+<p>While technically it may well be possible to follow along with these tutorials on a phone or tablet, the experience is likely to be anything but pleasant. Web development involves a lot of typing and switching between windows, which is not something mobile devices are really designed for. In light of this, I do highly recommend you follow these tutorials on a desktop or laptop as it will make your life much easier. However, I make no assumptions on what type of device this will be, or the operating system that you run on it, use whatever you are most comfortable with.</p>
+<h2><a class="header" href="#a-note-on-feedback" id="a-note-on-feedback">A note on feedback</a></h2>
+<p>I'm writing this book in the open, and all the source files used to create it can be found on github. If you spot a spelling mistake, typo, or gross technical inaccuracy and would like to correct it please feel free to open a pull request with a correction and admonishment appropriate to the level of my transgression.</p>
+<p>Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to <a href="mailto:bez@pinopticon.net">bez@pinopticon.net</a> with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.</p>
+<hr />
+<ol class="footnotes">
+<li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
+<li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
+<li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
+</ol>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="s1c1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a rel="next" href="s1c1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

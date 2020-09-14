@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Building Websites for Beginners</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Building Websites for Beginners</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>This book aims to provide a gentle introduction to building websites from scratch for the complete beginner; someone who is comfortable browsing the web and navigating their way around websites, but who has never tried to edit a webpage and knows nothing about the technologies that make them work. The only knowledge that I assume you will have is being able to open a browser and navigate to a web page and knowing how to create, edit and save documents with a computer text editor. Everything else will be explained as we go along.</p>
+<h2><a class="header" href="#what-well-cover" id="what-well-cover">What we'll cover</a></h2>
+<p>Over the course of this book I hope to introduce you to HTML, CSS and JS, the 'languages' of the web and show you how to use them to build simple web sites. If the mere mention of acronyms like these makes your eyes start to glaze over, don't worry, all will be explained and by the time you get to the end these should be as familiar as terms you use in your everyday life.</p>
+<p>The best way to learn how to do something is to actually do it, and websites are no exception. We'll create two simple websites over the course of the book: a single-page portfolio website that we'll slowly develop as we go along, adding pieces as we learn the concepts behind them; and a final project which will be a rather more complex blog website that will bring together much of what we've learned earlier as well as introducing some new techniques.</p>
+<h2><a class="header" href="#why-read-this-book" id="why-read-this-book">Why read this book?</a></h2>
+<p>There is a wealth of high quality material available on the web and in book form for those who are interested in learning to build websites, much of it written by people far more knowledgeable and experienced than myself; with that confession out of the way it may seem strange to write another guide when there are already so many available, but my reasons for doing this have a lot to do with the history of the web itself<sup id="a1"><a href="s0.html#f1">1</a></sup>.</p>
+<p>The web has not always been like it is now. When it first came into being at CERN during the 1990s web pages consisted of little more than text and a few images. Humans being humans, however, people soon started trying to build things on the web that it had not originally been designed with in mind. As developer's imaginations rapidly oustripped the limited tools available in the original specifications, they had to resort to various hacks and workarounds to try and implement them. Over the years, as certain trends became more common place, web browsers (and those who write the specifications that govern the web) started to offer more sophisticated tools to create them.</p>
+<p>The result of this process of evolution is that there are often multiple ways of achieving the same goal when it comes to building websites. Many existing books and tutorials teach these in the same way that the person writing them would have learnt them; starting with the early workarounds and only teaching the newer, purpose-built techniques when you have mastered the old way of doing things.</p>
+<p>For me personally, when I came to learn web development and later to teach it to others, this always felt a little backwards as the newer techniques are often quicker to pick up (even if they may seem a little counter-intuitive to someone who is used to the more established ways of doing things) and can result in websites which are quicker to load and easier to modify in the future.</p>
+<p>With that in mind, that is how the book will progress, teaching you contemporary ways of doing things<sup id="a2"><a href="s0.html#f2">2</a></sup> wherever possible, and only mentioning older workarounds where it seems necessary. With that introduction out of the way, let's get started.</p>
+<h2><a class="header" href="#what-youll-need" id="what-youll-need">What you'll need</a></h2>
+<p>One of the best bits of building websites is that the tools required are very simple indeed. All of the languages of the web mentioned earlier are text based, just like written human languages. So to create websites all you need is a text editor<sup id="a3"><a href="s0.html#f3">3</a></sup> and a web browser to view it in.</p>
+<p>Whatever is the default text editor your operating system comes with will be sufficient (e.g. notepad on Windows, often gedit on Linux etc.). However, there are dedicated text editors designed for programming and web development which come with a variety of features will make your life easier as they can highlight mistakes and cut down on repetitive typing. I personally use a free editor called <a href="https://code.visualstudio.com/">VSCode</a>, but <a href="https://atom.io/">Atom</a> and <a href="http://brackets.io/">Brackets</a> are also very good choices.</p>
+<p>While technically it may well be possible to follow along with these tutorials on a phone or tablet, the experience is likely to be anything but pleasant. Web development involves a lot of typing and switching between windows, which is not something mobile devices are really designed for. In light of this, I do highly recommend you follow these tutorials on a desktop or laptop as it will make your life much easier. However, I make no assumptions on what type of device this will be, or the operating system that you run on it, use whatever you are most comfortable with.</p>
+<h2><a class="header" href="#a-note-on-feedback" id="a-note-on-feedback">A note on feedback</a></h2>
+<p>I'm writing this book in the open, and all the source files used to create it can be found on github. If you spot a spelling mistake, typo, or gross technical inaccuracy and would like to correct it please feel free to open a pull request with a correction and admonishment appropriate to the level of my transgression.</p>
+<p>Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to <a href="mailto:bez@pinopticon.net">bez@pinopticon.net</a> with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.</p>
+<hr />
+<ol class="footnotes">
+<li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
+<li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
+<li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
+</ol><h1><a class="header" href="#html" id="html">HTML</a></h1>
+<p>Before we start learning to build websites, it would be beneficial to briefly explore (a simplified version of) what goes on 'under the hood' whenever you view a web page.</p>
+<p>When you type a web address into your browser's address bar (for the purposes of this example we will use one that should be familiar to most: www.google.com) your browser must first make what is called a DNS lookup. This essentially involves consulting an online address book to find the location of the computer (the server) where the website is stored (hosted). Using this address the browser then makes a request to the server for the page that you want to view.</p>
+<p>All being well, the server should respond to this request by sending the page back as a .html file. This .html file contains the content of the page you wish to view and your browser uses this to render the page on your computer (displaying it on the screen for many users, but also reading it out for those who are blind or have a visual impairment).</p>
+<p>To build websites, therefore, we need to create them in the format that browsers can understand: HTML.</p>
+<p>HTML stands for Hyper-Text Markup Language. Hyper-Text is essentially techno-geek speak for documents that link to other documents. To return to the example of www.google.com, when you make a search on google it scans the web for pages that might match the words you are looking for, and presents them as a list of links sorted by what it feels are the most relevant. Selecting any of these links will take you to that page so you can continue your search. It would probably not be exaggerating things much to say that links between documents are the single thing that contributes the most to the usefulness of the internet.</p>
+<p>To continue on with our breakdown of HTML you will notice that the L stands for language. In this case we are not referring to a language like English, Chinese, or Arabic, that is used by people to communicate with on another, but instead what is know as a computer language; which allows people to communicate with computers.</p>
+<p>Fundamentally, computers deal in binary, familiar to most as longs string of 0s and 1s like this: 011001100. Having to use binary everytime we want to tell a computer to do something would obviously become very tedious and error prone, so very clever people have invented a whole series of languages which are closer to those you would use in everyday life and which we can use to write instructions that the computer will then convert to binary before it follows them. There are a whole host of different computer languages for different use cases, and HTML is the one we use for describing websites.</p>
+<p>That, then, just leaves us with Markup. Markup describes the fact that HTML is a language for marking up documents; annotating parts of them to give them additional meaning. These annotations are what allow the browser to determine whether a particular part of the page is a piece of text or an image (along with a whole host of other possibilities) and serve as the instructions for how to build the page.</p>
+<p>In the next chapter we will start to look at how html documents are formed.</p>
+<h1><a class="header" href="#tags-and-elements" id="tags-and-elements">Tags and Elements</a></h1>
+<p>Web pages are just specially formatted text files. As alluded to in the previous chapter, the web browser needs to know what form the various pieces of content take in order to reconstruct the page for display or reading out. This is achieved through the use of tags. Here's a simple example:</p>
+<pre><code>&lt;h3&gt;I like cats&lt;/h3&gt;
+&lt;p&gt;I like cats&lt;/p&gt;
+</code></pre>
+<p>Above you can see two identical lines of text, surrounded on either side by a series of strange looking characters. When the browser comes to actually display the page they will look like this.</p>
+<figure>
+<h3><a class="header" href="#i-like-cats" id="i-like-cats">I like cats</a></h3>
+<p>I like cats</p>
+</figure>
+<p>The characters on either side of the line of text are the tags. The opening <code>&lt;</code> and closing <code>&gt;</code> angle brackets denote that this is a tag as opposed to actual content and the letters and/or numbers in between determine the type of tag it is (its identifier). In the example above the first line is a level 3 heading (html has 6 levels of heading of differing importance, <code>h1</code> being the most important and <code>h6</code> the least) and the second is a paragraph.</p>
+<p>When the browser comes to process the html file it will see the opening tag (e.g. <code>&lt;h3&gt;</code>) and know that everything following it until the closing tag (e.g. <code>&lt;/h3&gt;</code>) is the same type of content. The backslash <code>/</code> directly following the opening bracket of the second tag denotes that it is a closing, rather than opening, tag.</p>
+<p>The whole section of text including the opening and closing tags, as well as the content in between them, is referred to as an element. In this case the first line is a <code>h3</code> element and the second a <code>p</code> element. A web page is just a collection of different elements.</p>
+<h2><a class="header" href="#element-relationships" id="element-relationships">Element relationships</a></h2>
+<p>Elements don't have to proceed purely one after another, however, and can be nested inside one another to represent complex relationships. These relationships are very much like those you have with other members of your family, and thus share similar names with them. Any elements added in between the opening and closing tags of an element become 'descendants' of that element and will become associated with it. Time for another example:</p>
+<pre><code>&lt;p&gt;Todo list&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;Wake up&lt;/li&gt;
+    &lt;li&gt;Have breakfast&lt;/li&gt;
+    &lt;li&gt;Learn more about HTML&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>What we have here is a series of <code>li</code> elements, nested inside an <code>ol</code> element. An <code>ol</code> is an ordered list, and <code>li</code> stands for list item. Here the <code>ol</code> is the parent of the <code>li</code> elements, which are in turn siblings of one another.</p>
+<p>When rendered by the browser, the above html will look like this:</p>
+<figure>
+<p>Todo list</p>
+<ol>
+    <li>Wake up</li>
+    <li>Have breakfast</li>
+    <li>Learn more about HTML</li>
+</ol>
+</figure>
+<p>The advantage of being able to form relationships between elements like this is it brings additional context to information. Here we can see that not only are the <code>li</code> elements items in a list, but they are all members of the same list and should be processed in a particular order. Consider another example:</p>
+<pre><code>&lt;p&gt;Todo list&lt;/p&gt;
+&lt;ol&gt;
+   &lt;li&gt;Wake up&lt;/li&gt;
+   &lt;li&gt;Have breakfast&lt;/li&gt;
+   &lt;li&gt;Learn more about HTML&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;My favourite foods&lt;/p&gt;
+&lt;ul&gt;
+   &lt;li&gt;Pizza&lt;/li&gt;
+   &lt;li&gt;Pasta&lt;/li&gt;
+   &lt;li&gt;Cake&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Here we have added another list after the first, in this case, however, it is an unordered list, or <code>ul</code>. While we now have 6 <code>li</code> elements, they are not all member's of the same list, and thus should be treated separately. Also, while the second list still represents related items, they do not have any particular ordering associated with them. Here's how the modified example appears when rendered by a browser:</p>
+<figure>
+<p>Todo list</p>
+<ol>
+    <li>Wake up</li>
+    <li>Have breakfast</li>
+    <li>Learn more about HTML</li>
+</ol>
+<p>My favourite foods</p>
+<ul>
+    <li>Pizza</li>
+    <li>Pasta</li>
+    <li>Cake</li>
+</ul>
+</figure>
+<p>There is no limit to the number of levels that elements can be nested, and most webpages will have a large number of different elements with complex relationships resembling the most well-researched family trees.</p>
+<p>We've covered quite a lot in this chapter, so don't worry if it doesn't all take first time. Even experienced web developers often need to go over new material several times before they fully understand it. As long as you comprehend the principles behind what you've just read you should be fine and shouldn't need to remember the specifics; it will become second nature soon enough.</p>
+<p>In the next chapter we'll look at our first web page.</p>
+<h1><a class="header" href="#hello-world" id="hello-world">Hello world</a></h1>
+<p>Now that you know what html tags and elements are we can look at our first webpage. There is an old tradition when learning any new computer language to first write something to display the sentence &quot;Hello world!&quot; to confirm everything is working correctly, and we are going to follow this.</p>
+<p>To start with, please create a new file somewhere where you will keep your new webpages and call it <code>hello_world.html</code>, then open the file in a text editor and paste the following lines into it:</p>
+<pre><code>&lt;!doctype html&gt;
+
+&lt;html lang=&quot;en&quot;&gt;
+
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;title&gt;Hello world&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;Hello world!&lt;/h1&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>If you then save the file and open it with a web browser you should see something like this:</p>
+<p><img src="./images/s1c3/01.png" alt="hello_world.html rendered in Firefox" /></p>
+<p>There is a little bit more html here than I have shown you previously, but we will go over it line by line to explain what each element does.</p>
+<p>The first element in the document is <code>&lt;!doctype html&gt;</code>, this is simply a marker to tell the web browser that the document is a html document. It also indicates that this document is formatted according to the HTML5 specification<sup id="a1"><a href="s1c3.html#f1">1</a></sup>, which is the current standard.</p>
+<h2><a class="header" href="#attributes" id="attributes">Attributes</a></h2>
+<p>The next element is a bit more interesting as it introduces something we've not encountered before, have a look at just the html element, I've put an ellipsis character <code>…</code> in between the opening and closing tags to indicate that there is other content there that we are not currently interested in.</p>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+    …
+&lt;/html&gt;
+</code></pre>
+<p>You will notice that there is some other text in the opening tag, after the tag type, but before the closing angle bracket. This is what is called an attribute. Attributes give additional meaning to elements than their type alone confers. In the case of the html element, it has a language attribute indicating that the content of the webpage is written in the English language. Other possibilities include <code>fr</code> for French and <code>ar</code> for Arabic.</p>
+<p>Attributes consist of the name of the attribute (what type it is), an <code>=</code> sign and the value of the attribute (almost always enclosed in quotation marks <code>&quot;&quot;</code>). Elements can have any number of attributes and they are separated from one another (and the tag name) by a space.</p>
+<p>The other thing to note is that, as the <code>html</code> element wraps everything else in the document, it is the ancestor for every element on the page. It is often referred to as the 'root' element as, like the roots of a tree, all the branches are descended from it.</p>
+<p>The <code>html</code> element always has two children, <code>head</code> and <code>body</code>. As you may be able to deduce from comparing the code for the webpage with what is displayed when viewing it in a browser, the <code>body</code> element contains all the actual content for the page; any elements that you add as descendants of the <code>body</code> will be rendered by the browser when someone views the page. The two elements which are inside the <code>head</code> tags don't seem to be being displayed, so what is their purpose? The answer to that is that they are proving 'metadata' about the page.</p>
+<h2><a class="header" href="#metadata" id="metadata">Metadata</a></h2>
+<p>To quote wikipedia: &quot;Metadata is data that provides information about other data&quot;. That may sound opaque and possibly a little intimidating, but the concept is actually quite simple. If we were to for a moment pretend that our website was actually a piece of music on our computer, the body of the page would be the song itself and the head would be all the information about the song; such as its Title, the Artist, Composer, Album it is from, and Year in which is was recorded. None of this 'metadata' forms part of the song itself, but it provides us with a lot of additional information about it. Similarly, if you were to view a photograph on your computer, it might also have some metadata attached to it proving information about when the photograph was taken, what camera and lens were used to take it, and what the exposure settings were.</p>
+<p>The elements in a html document's <code>head</code> are no different, and provide information to the browser and user about the page. In the case of our example above, there are only two elements in the head, but there can be many more. The first element is a <code>meta</code> element, with the <code>charset</code> attribute. All text on a computer is stored using a particular &quot;character set&quot; which tells the computer how to convert the binary 1s and 0s into letters, a little like more code allows transferring messages using only dots and dashes. The <code>charset</code> attribute tells the browser that the text on the page is encoded using the <code>utf-8</code> character set, which is generally the one used on the web.</p>
+<p>The only other element in the head is a <code>title</code> element with the content &quot;Hello world&quot;. As the name suggests, the title element tells the browser what the page's title is, and is used on browser tabs and and when the page appears in search results. Try changing this and refreshing the page, the title of the open tab should change to whatever new text you have entered.</p>
+<h2><a class="header" href="#body-content" id="body-content">Body content</a></h2>
+<p>The other child of the <code>html</code> element is the <code>body</code> element and, as alluded to above, includes the actual content of the page. For now we just have a <code>h1</code> element with the content &quot;Hello World!&quot;. Try changing this text, or adding in some of the elements we covered in the last section and refreshing the page in the browser to see how adding elements to the body changes what the browser displays; make sure you remember to save the text document though, otherwise the changes you make will not be rendered. </p>
+<hr />
+<ol class="footnotes">
+<li id="f1">HTML has gone through several major revisions in its history, each one adding (and occasionally removing) features.</li>
+<li id="f2">The lang attribute can also be added to other elements on the page where you have text in multiple languages. Where this is the case, try and set the html lang attribute to the one used for the majority of the page and use lang on other elements where they differ from the main content. For a list of all the languages that the attribute have a look at the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">HTML Language Code Reference</a> on w3schools..</li>
+</ol>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
