@@ -1,0 +1,79 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    table-layout: auto;
+    width: max-content;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    max-width: 20rem;
+    vertical-align: baseline;
+    padding: 0.25rem;
+    border: 2px solid;
+}
+
+label {
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 20rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 0.5rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1220px) {
+    section {
+        padding: 0 calc((100% - 1200px) / 2);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
