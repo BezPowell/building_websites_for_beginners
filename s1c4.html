@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Building Websites for Beginners</title>
+        <title>Starting the first website - Building Websites for Beginners</title>
         
         
 
@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html" class="active"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -155,40 +155,34 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
-<p>This book aims to provide a gentle introduction to building websites from scratch for the complete beginner; someone who is comfortable browsing the web and navigating their way around websites, but who has never tried to edit a webpage and knows nothing about the technologies that make them work. The only knowledge that I assume you will have is being able to open a browser and navigate to a web page and knowing how to create, edit and save documents with a computer text editor. Everything else will be explained as we go along.</p>
-<h2><a class="header" href="#what-well-cover" id="what-well-cover">What we'll cover</a></h2>
-<p>Over the course of this book I hope to introduce you to HTML, CSS and JS, the 'languages' of the web and show you how to use them to build simple web sites. If the mere mention of acronyms like these makes your eyes start to glaze over, don't worry, all will be explained and by the time you get to the end these should be as familiar as terms you use in your everyday life.</p>
-<p>The best way to learn how to do something is to actually do it, and websites are no exception. We'll create two simple websites over the course of the book: a single-page portfolio website that we'll slowly develop as we go along, adding pieces as we learn the concepts behind them; and a final project which will be a rather more complex blog website that will bring together much of what we've learned earlier as well as introducing some new techniques.</p>
-<h2><a class="header" href="#why-read-this-book" id="why-read-this-book">Why read this book?</a></h2>
-<p>There is a wealth of high quality material available on the web and in book form for those who are interested in learning to build websites, much of it written by people far more knowledgeable and experienced than myself; with that confession out of the way it may seem strange to write another guide when there are already so many available, but my reasons for doing this have a lot to do with the history of the web itself<sup id="a1"><a href="#f1">1</a></sup>.</p>
-<p>The web has not always been like it is now. When it first came into being at CERN during the 1990s web pages consisted of little more than text and a few images. Humans being humans, however, people soon started trying to build things on the web that it had not originally been designed with in mind. As developer's imaginations rapidly oustripped the limited tools available in the original specifications, they had to resort to various hacks and workarounds to try and implement them. Over the years, as certain trends became more common place, web browsers (and those who write the specifications that govern the web) started to offer more sophisticated tools to create them.</p>
-<p>The result of this process of evolution is that there are often multiple ways of achieving the same goal when it comes to building websites. Many existing books and tutorials teach these in the same way that the person writing them would have learnt them; starting with the early workarounds and only teaching the newer, purpose-built techniques when you have mastered the old way of doing things.</p>
-<p>For me personally, when I came to learn web development and later to teach it to others, this always felt a little backwards as the newer techniques are often quicker to pick up (even if they may seem a little counter-intuitive to someone who is used to the more established ways of doing things) and can result in websites which are quicker to load and easier to modify in the future.</p>
-<p>With that in mind, that is how the book will progress, teaching you contemporary ways of doing things<sup id="a2"><a href="#f2">2</a></sup> wherever possible, and only mentioning older workarounds where it seems necessary. With that introduction out of the way, let's get started.</p>
-<h2><a class="header" href="#what-youll-need" id="what-youll-need">What you'll need</a></h2>
-<p>One of the best bits of building websites is that the tools required are very simple indeed. All of the languages of the web mentioned earlier are text based, just like written human languages. So to create websites all you need is a text editor<sup id="a3"><a href="#f3">3</a></sup> and a web browser to view it in.</p>
-<p>Whatever is the default text editor your operating system comes with will be sufficient (e.g. notepad on Windows, often gedit on Linux etc.). However, there are dedicated text editors designed for programming and web development which come with a variety of features to make your life easier as they can highlight mistakes and cut down on repetitive typing. I personally use a free editor called <a href="https://code.visualstudio.com/">VSCode</a>, but <a href="https://atom.io/">Atom</a> and <a href="http://brackets.io/">Brackets</a> are also very good choices.</p>
-<p>While technically it may well be possible to follow along with these tutorials on a phone or tablet, the experience is likely to be anything but pleasant. Web development involves a lot of typing and switching between windows, which is not something mobile devices are really designed for. In light of this, I do highly recommend you follow these tutorials on a desktop or laptop as it will make your life much easier. However, I make no assumptions on what type of device this will be, or the operating system that you run on it, use whatever you are most comfortable with.</p>
-<h2><a class="header" href="#a-note-on-feedback" id="a-note-on-feedback">A note on feedback</a></h2>
-<p>I'm writing this book in the open, and all the source files used to create it can be found on <a href="https://github.com/BezPowell/building_websites_for_beginners">github</a>. If you spot a spelling mistake, typo, or gross technical inaccuracy and would like to correct it please feel free to open a pull request with a correction and admonishment appropriate to the level of my transgression.</p>
-<p>Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to <a href="mailto:bez@pinopticon.net">bez@pinopticon.net</a> with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.</p>
+                        <h1><a class="header" href="#starting-the-first-website" id="starting-the-first-website">Starting the first website</a></h1>
+<p>Now that we have seen how html documents are structured we can start building our first webpage. For the rest of this section we will expand upon our knowledge of HTML by building a simple portfolio page, adding sections to it as we learn about some of the different types of elements that are available to use. Then, in the next section on CSS, we will add some styling to make the page more visually interesting. By the end of the CSS section we should have a completed webpage that looks a bit like this:</p>
+<p><img src="./images/s1c4/Desktop_styled.jpg" alt="Our first website viewed on a computer" /></p>
+<h2><a class="header" href="#content-styling-interactivity" id="content-styling-interactivity">Content. Styling. Interactivity.</a></h2>
+<p>You may remember that in the introduction I talked about the web being made up of three main languages (HTML, CSS &amp; JS) and that, while we have only just started learning about HTML, I have already started talking about CSS. Panic ye not, there is a reason for this.</p>
+<p>Back in the early days of the web all pages were built entirely in HTML, which has very little scope for modifying the appearance of individual elements. If someone wanted to change the way a particular part of the page looked, therefore, they would often have to change which elements they were using. A common example of this is trying to make headings look smaller by replacing all <code>h1</code> tags with <code>h2</code> tags, or even, <code>h3</code><sup id="a1"><a href="#f1">1</a></sup>. This comes with some major downsides.</p>
+<p>Humans are very good at inferring contextual information from the visual relationships between objects. Machines (and those humans who can not see), however, are not and the content of a page where any text that you wanted to make bigger had been wrapped in heading tags would read very differently to them. As a result, any page built with elements selected for visual appearance rather than meaning can be very difficult for screen reader users to understand, and would likely appear incorrectly when being indexed by a search engine, or in any other system where a machine first processes the page.</p>
+<p>To overcome this difficulty, webpages are now built using more than one language. HTML is used purely to describe the content of the page, while CSS controls the appearance and JS any additional interactive elements that are needed. By having a separation of concerns between the different languages like this, we can ensure that our websites will work in the widest possible context; there is no point making a beautiful website if no one can find it using a search engine and when they do stumble upon it by accident they can not use it if they have any disabilities.</p>
+<p>HTML also comes with a lot of functionality already implemented by browsers that if you use the wrong element for the job you either have to recreate yourself, or lose altogether. Despite the advantages of using HTML purely to describe the content of a page, many people still try and use it to handle appearance and layout as well. Please don't fall into this trap as it will make life a lot more difficult for both you and your users.</p>
+<p>I mention all of this because firstly it is important<sup id="a2"><a href="#f2">2</a></sup>, and secondly because after the end of the section on HTML our first website will actually look rather more like this:</p>
+<p><img src="./images/s1c4/Desktop_unstyled.jpg" alt="A plain html view of our first website" /></p>
+<p>Please don't let this put you off. It might not look like much, but it will be the solid foundations from which you can build an amazing website. Before you know it you will have also got the hang of CSS and will be building useful <em>and</em> beautiful websites.</p>
+<p>That's enough talking from me, let's get our hands dirty with some more HTML.</p>
 <hr />
 <ol class="footnotes">
-<li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
-<li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
-<li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
+<li id="f1">Though there are many others such as turning links into buttons, or even using images for text.</li>
+<li id="f2">I really do apologise for going on so much about this topic. Rants like this will be kept to an absolute minimum I promise.</li>
 </ol>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-
-                        
-                            <a rel="next" href="s1c1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="prev" href="s1c3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
                             </a>
+                        
+
                         
 
                         <div style="clear: both"></div>
@@ -198,11 +192,11 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-
-                
-                    <a rel="next" href="s1c1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="prev" href="s1c3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
                     </a>
+                
+
                 
             </nav>
 
