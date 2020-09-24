@@ -175,12 +175,15 @@
 <h2><a class="header" href="#a-note-on-feedback" id="a-note-on-feedback">A note on feedback</a></h2>
 <p>I'm writing this book in the open, and all the source files used to create it can be found on <a href="https://github.com/BezPowell/building_websites_for_beginners">github</a>. If you spot a spelling mistake, typo, or gross technical inaccuracy and would like to correct it please feel free to open a pull request with a correction and admonishment appropriate to the level of my transgression.</p>
 <p>Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to <a href="mailto:bez@pinopticon.net">bez@pinopticon.net</a> with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.</p>
-<hr />
+<h3><a class="header" href="#footnotes" id="footnotes">Footnotes</a></h3>
 <ol class="footnotes">
 <li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
 <li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
 <li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
-</ol><h1><a class="header" href="#html" id="html">HTML</a></h1>
+</ol>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<h1><a class="header" href="#html" id="html">HTML</a></h1>
 <p>Before we start learning to build websites, it would be beneficial to briefly explore (a simplified version of) what goes on 'under the hood' whenever you view a web page.</p>
 <p>When you type a web address into your browser's address bar (for the purposes of this example we will use one that should be familiar to most: www.google.com) your browser must first make what is called a DNS lookup. This essentially involves consulting an online address book to find the location of the computer (the server) where the website is stored (hosted). Using this address the browser then makes a request to the server for the page that you want to view.</p>
 <p>All being well, the server should respond to this request by sending the page back as a .html file. This .html file contains the content of the page you wish to view and your browser uses this to render the page on your computer (displaying it on the screen for many users, but also reading it out for those who are blind or have a visual impairment).</p>
@@ -190,6 +193,8 @@
 <p>Fundamentally, computers deal in binary, familiar to most as longs string of 0s and 1s like this: 011001100. Having to use binary everytime we want to tell a computer to do something would obviously become very tedious and error prone, so very clever people have invented a whole series of languages which are closer to those you would use in everyday life and which we can use to write instructions that the computer will then convert to binary before it follows them. There are a whole host of different computer languages for different use cases, and HTML is the one we use for describing websites.</p>
 <p>That, then, just leaves us with Markup. Markup describes the fact that HTML is a language for marking up documents; annotating parts of them to give them additional meaning. These annotations are what allow the browser to determine whether a particular part of the page is a piece of text or an image (along with a whole host of other possibilities) and serve as the instructions for how to build the page.</p>
 <p>In the next chapter we will start to look at how html documents are formed.</p>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 <h1><a class="header" href="#tags-and-elements" id="tags-and-elements">Tags and Elements</a></h1>
 <p>Web pages are just specially formatted text files. As alluded to in the previous chapter, the web browser needs to know what form the various pieces of content take in order to reconstruct the page for display or reading out. This is achieved through the use of tags. Here's a simple example:</p>
 <pre><code>&lt;h3&gt;I like cats&lt;/h3&gt;
@@ -254,6 +259,8 @@
 <p>There is no limit to the number of levels that elements can be nested, and most webpages will have a large number of different elements with complex relationships resembling the most well-researched family trees.</p>
 <p>We've covered quite a lot in this chapter, so don't worry if it doesn't all take first time. Even experienced web developers often need to go over new material several times before they fully understand it. As long as you comprehend the principles behind what you've just read you should be fine and shouldn't need to remember the specifics; it will become second nature soon enough.</p>
 <p>In the next chapter we'll look at our first web page.</p>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
 <h1><a class="header" href="#hello-world" id="hello-world">Hello world</a></h1>
 <p>Now that you know what html tags and elements are we can look at our first webpage. There is an old tradition when learning any new computer language to first write something to display the sentence &quot;Hello world!&quot; to confirm everything is working correctly, and we are going to follow this.</p>
 <p>To start with, please create a new file somewhere where you will keep your new webpages and call it <code>hello_world.html</code>, then open the file in a text editor and paste the following lines into it:</p>
@@ -295,11 +302,14 @@
 <p>The only other element in the head is a <code>title</code> element with the content &quot;Hello world&quot;. As the name suggests, the title element tells the browser what the page's title is, and is used on browser tabs and and when the page appears in search results. Try changing this and refreshing the page, the title of the open tab should change to whatever new text you have entered.</p>
 <h2><a class="header" href="#body-content" id="body-content">Body content</a></h2>
 <p>The other child of the <code>html</code> element is the <code>body</code> element and, as alluded to above, includes the actual content of the page. For now we just have a <code>h1</code> element with the content &quot;Hello World!&quot;. Try changing this text, or adding in some of the elements we covered in the last section and refreshing the page in the browser to see how adding elements to the body changes what the browser displays; make sure you remember to save the text document though, otherwise the changes you make will not be rendered. </p>
-<hr />
+<h3><a class="header" href="#footnotes-1" id="footnotes-1">Footnotes</a></h3>
 <ol class="footnotes">
 <li id="f1">HTML has gone through several major revisions in its history, each one adding (and occasionally removing) features.</li>
 <li id="f2">The lang attribute can also be added to other elements on the page where you have text in multiple languages. Where this is the case, try and set the html lang attribute to the one used for the majority of the page and use lang on other elements where they differ from the main content. For a list of all the languages that the attribute have a look at the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">HTML Language Code Reference</a> on w3schools..</li>
-</ol><h1><a class="header" href="#starting-the-first-website" id="starting-the-first-website">Starting the first website</a></h1>
+</ol>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<h1><a class="header" href="#starting-the-first-website" id="starting-the-first-website">Starting the first website</a></h1>
 <p>Now that we have seen how html documents are structured we can start building our first webpage. For the rest of this section we will expand upon our knowledge of HTML by building a simple portfolio page, adding sections to it as we learn about some of the different types of elements that are available to use. Then, in the next section on CSS, we will add some styling to make the page more visually interesting. By the end of the CSS section we should have a completed webpage that looks a bit like this:</p>
 <p><img src="./images/s1c4/Desktop_styled.jpg" alt="Our first website viewed on a computer" /></p>
 <h2><a class="header" href="#content-styling-interactivity" id="content-styling-interactivity">Content. Styling. Interactivity.</a></h2>
@@ -312,11 +322,14 @@
 <p><img src="./images/s1c4/Desktop_unstyled.jpg" alt="A plain html view of our first website" /></p>
 <p>Please don't let this put you off. It might not look like much, but it will be the solid foundations from which you can build an amazing website. Before you know it you will have also got the hang of CSS and will be building useful <em>and</em> beautiful websites.</p>
 <p>That's enough talking from me, let's get our hands dirty with some more HTML.</p>
-<hr />
+<h3><a class="header" href="#footnotes-2" id="footnotes-2">Footnotes</a></h3>
 <ol class="footnotes">
 <li id="f1">Though there are many others such as turning links into buttons, or even using images for text.</li>
 <li id="f2">I really do apologise for going on so much about this topic. Rants like this will be kept to an absolute minimum I promise.</li>
 </ol>
+<hr />
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
