@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Tables - Building Websites for Beginners</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li><li class="chapter-item expanded "><a href="s1c5.html"><strong aria-hidden="true">1.4.</strong> Basic page structure</a></li><li class="chapter-item expanded "><a href="s1c6.html"><strong aria-hidden="true">1.5.</strong> Sections</a></li><li class="chapter-item expanded "><a href="s1c7.html" class="active"><strong aria-hidden="true">1.6.</strong> Tables</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Building Websites for Beginners</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#tables" id="tables">Tables</a></h1>
+<p>The next thing we are going to work on for our page is the details of our author's past employments. Before we start writing any HTML, however, we should take a brief moment to think about how it would be best to represent it. If you look at a typical CV, as well as the employer, they generally contain information about the job title, dates of employment, and a paragraph or two detailing what the job actually entailed. We could convey this by having the job titles or employers as some form of heading element, and any other information as paragraphs; but this would not properly express the fact that each of these fields are related to one another.</p>
+<p>The perfect element to represent such 2-dimensional data is a table and, in fact, is often what is used on paper CVs as well. Tables in HTML, unfortunately, do how a small number of minor drawbacks, the main one being the difficulty of representing a two dimensional grid in a markup language. As a result of this, the markup for tables is probably the most complex of any element you will encounter when building websites. So instead of overwhelming you with the final code for the section as I have done previously, we will first learn about how to create tables in a series of smaller stages. This won't take long, I promise.</p>
+<h2><a class="header" href="#table-rows-and-data" id="table-rows-and-data">Table rows and data</a></h2>
+<p>The first element we need to create a table is aptly named the <code>table</code>. This serves as the container for all of the data and indicates that anything inside of it is part of the table. The table contents are then split up into rows, represented by <code>tr</code> elements (which stands for table row). Each row then has it's cell data populated using <code>td</code> elements (which stands for table data). Confused? Let's look at an example:</p>
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Country&lt;/td&gt;
+        &lt;td&gt;Population&lt;/td&gt;
+        &lt;td&gt;Language&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;UK&lt;/td&gt;
+        &lt;td&gt;63,182,000&lt;/td&gt;
+        &lt;td&gt;English&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;France&lt;/td&gt;
+        &lt;td&gt;64,898,000&lt;/td&gt;
+        &lt;td&gt;Français&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Germany&lt;/td&gt;
+        &lt;td&gt;80,219,695&lt;/td&gt;
+        &lt;td&gt;Deutsch&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>This represents a table with 4 rows and 3 columns. As you can see, each <code>tr</code> is a child of the <code>table</code>, and the <code>td</code> elements are children of the <code>tr</code> rows. When displayed on a page it will look like this:</p>
+<table>
+    <tr>
+        <td>Country</td>
+        <td>Population</td>
+        <td>Language</td>
+    </tr>
+    <tr>
+        <td>UK</td>
+        <td>63,182,000</td>
+        <td>English</td>
+    </tr>
+    <tr>
+        <td>France</td>
+        <td>64,898,000</td>
+        <td>Français</td>
+    </tr>
+    <tr>
+        <td>Germany</td>
+        <td>80,219,695</td>
+        <td>Deutsch</td>
+    </tr>
+</table>
+<p>We do not explicitly declare columns in HTML, instead they are inferred from the number of cells in each row. This format can feel extremely unwieldy when you first encounter it but, as mentioned earlier, stems from the difficulty of trying to lay out a grid using markup. If we actually tried to lay out cells in the same way they appear, the browser would have to infer where columns started and ended, which might result in a different layour from what you intended. After you have worked on a few pages with tables you should get the hang of it and it will become second nature.</p>
+<h2><a class="header" href="#table-headings" id="table-headings">Table Headings</a></h2>
+<p>We now have a basic table, but there is still some critical information missing. Someone looking at the table as rendered by the browser might be able to infer that the top row represents the column headings, but the markup does not convey this; each row, has an identical structure. To remove this ambiguity we can use a <code>th</code> element with a <code>scope</code> attribute, instead of a <code>td</code>, for any headings. Which will make life easier for any machines or screen reader users reading our page. Have a look at the example below:</p>
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;col&quot;&gt;Country&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Population&lt;/th&gt;
+        &lt;th scope=&quot;col&quot;&gt;Language&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;UK&lt;/th&gt;
+        &lt;td&gt;63,182,000&lt;/td&gt;
+        &lt;td&gt;English&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;France&lt;/th&gt;
+        &lt;td&gt;64,898,000&lt;/td&gt;
+        &lt;td&gt;Français&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope=&quot;row&quot;&gt;Germany&lt;/th&gt;
+        &lt;td&gt;80,219,695&lt;/td&gt;
+        &lt;td&gt;Deutsch&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>What we have done here is to replace all of the <code>td</code> elements in the first row with <code>th</code> elements to define them as the headings for the table columns. The <code>scope</code> attribute must have a value of either <code>col</code> or <code>row</code> to define whether it is acting as a heading for a column or row.</p>
+<p>We have also made the first cell in each of the other rows a heading; this shows that the population and language columns apply to the country, rather than, for example, the UK being the official country of the English language or Deutsch the official language of the number 80,219,695. This might seem unnecessary for people used to languages that read from left to right, as we assume that the first element we see is the most important, but again, this is just about being explicit.  When rendered by a browser our updated table will look like this:</p>
+<table>
+    <tr>
+        <th scope="col">Country</th>
+        <th scope="col">Population</th>
+        <th scope="col">Language</th>
+    </tr>
+    <tr>
+        <th scope="row">UK</th>
+        <td>63,182,000</td>
+        <td>English</td>
+    </tr>
+    <tr>
+        <th scope="row">France</th>
+        <td>64,898,000</td>
+        <td>Français</td>
+    </tr>
+    <tr>
+        <th scope="row">Germany</th>
+        <td>80,219,695</td>
+        <td>Deutsch</td>
+    </tr>
+</table>
+<h2><a class="header" href="#table-headers-and-bodies" id="table-headers-and-bodies">Table headers and bodies</a></h2>
+<p>There is one final change we are going to make to our example table before we get back to work on our CV page, which again will add a little clarity for anything reading the code. The first row of our table is now composed entirely of <code>th</code> elements, but otherwise looks structurally similar to the other rows. To further differentiate it's component parts, we can split the table into a header and body.</p>
+<p>To do this we wrap the first row with the column headings into a <code>thead</code> element and the rest of the rows into a <code>tbody</code> as below:</p>
+<pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;col&quot;&gt;Country&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Population&lt;/th&gt;
+            &lt;th scope=&quot;col&quot;&gt;Language&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;UK&lt;/th&gt;
+            &lt;td&gt;63,182,000&lt;/td&gt;
+            &lt;td&gt;English&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;France&lt;/th&gt;
+            &lt;td&gt;64,898,000&lt;/td&gt;
+            &lt;td&gt;Français&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;Germany&lt;/th&gt;
+            &lt;td&gt;80,219,695&lt;/td&gt;
+            &lt;td&gt;Deutsch&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>This won't change how the browser renders the table at all, it just helps us organise the data and provides further clues as to the meaning of the contents. There is also a <code>tfoot</code> to define a footer for a table, but this is less frequently seen. An example of it's use would be the totals row for a financial spreadsheet.</p>
+<h2><a class="header" href="#the-cv-section" id="the-cv-section">The CV Section</a></h2>
+<p>Now we have covered the syntax for building tables in HTML, we can finally add the next section to our page. Copy and paste the following lines between the end of the last <code>section</code> element, and the ending <code>main</code> tag.</p>
+<pre><code>    &lt;/section&gt;
+…
+    &lt;section&gt;
+        &lt;h2&gt;My greatest achievements&lt;/h2&gt;
+        &lt;table&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Employer&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Description&lt;/th&gt;
+                    &lt;th scope=&quot;col&quot;&gt;Date&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;Job 1&lt;/th&gt;
+                    &lt;td&gt;Employer 1&lt;/td&gt;
+                    &lt;td&gt;Vestibulum vel feugiat nisl, quis consequat odio. Vestibulum tempus venenatis risus a
+                        faucibus.
+                        Donec a mi finibus, laoreet nisl eget, ultricies tortor.&lt;/td&gt;
+                    &lt;td&gt;2015 - 2020&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;Job 2&lt;/th&gt;
+                    &lt;td&gt;Employer 2&lt;/td&gt;
+                    &lt;td&gt;Aliquam id sem ante. Morbi eget laoreet est. Donec ut est dapibus, mattis nisl ut,
+                        accumsan
+                        odio.&lt;/td&gt;
+                    &lt;td&gt;2014 - 2015&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;Job 3&lt;/th&gt;
+                    &lt;td&gt;Employer 3&lt;/td&gt;
+                    &lt;td&gt;Aenean vitae vestibulum nulla. Quisque purus dui, bibendum nec ex molestie, egestas
+                        semper
+                        dui.
+                        In auctor blandit odio at tincidunt.&lt;/td&gt;
+                    &lt;td&gt;2012 - 2014&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th scope=&quot;row&quot;&gt;Job 4&lt;/th&gt;
+                    &lt;td&gt;Employer 4&lt;/td&gt;
+                    &lt;td&gt;Morbi neque odio, scelerisque in molestie non, vestibulum at ante. Sed sagittis dui at
+                        nulla
+                        consequat dignissim. Cras convallis aliquam tellus, ac sagittis nisi porttitor ut. Proin
+                        lorem
+                        augue, feugiat et magna vel, mattis egestas mi.&lt;/td&gt;
+                    &lt;td&gt;2011&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/section&gt;
+…
+&lt;/main&gt;
+</code></pre>
+<p>All of these elements should now be familiar to you. We have added a new <code>section</code> with a <code>h2</code> and <code>table</code> as children. The <code>table</code> has a <code>thead</code> and <code>tbody</code> and all of the <code>th</code> elements have the appropriate <code>scope</code> attributes.</p>
+<h2><a class="header" href="#wrapping-up" id="wrapping-up">Wrapping up</a></h2>
+<p>Now that our page is starting to get a little longer, instead of showing the complete code for the page, I will just provide a link to the <a href="https://github.com/BezPowell/building_websites_for_beginners/blob/master/code/s1c7/index.html">final index.html for this chapter</a>.</p>
+<p>I have talked a lot in this chapter about how we can use specific elements to give added meaning to our content. While many of the changes I made to the table will make no visual difference, and may seem unnecessary at first, you must remember that about 99.9% of the time your HTML files will be read by a computer, rather than a person.</p>
+<p>While people are generally flexible and good at inferring meaning from context, machines (unfortunately) are invariably stubbornly inflexible and pendantic; and as our pages much first be processed by machines before anyone can view them, it is in our best interests to be as explicit with our code as we can. Also, if you come back to try and make changes to your pages months or years after initially making them, your future self will thank you if they are as clear and unambiguous as possible.</p>
+<p>In the next chapter we will cover how to add links to pages and go over the difference between block and inline elements.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="s1c6.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="s1c6.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
