@@ -201,8 +201,8 @@
 </code></pre>
 <p>Above you can see two identical lines of text, surrounded on either side by a series of strange looking characters. When the browser comes to actually display the page they will look like this.</p>
 <figure>
-<h3><a class="header" href="#i-like-cats" id="i-like-cats">I like cats</a></h3>
-<p>I like cats</p>
+    <h3><a class="header" href="#i-like-cats" id="i-like-cats">I like cats</a></h3>
+    <p>I like cats</p>
 </figure>
 <p>The characters on either side of the line of text are the tags. The opening <code>&lt;</code> and closing <code>&gt;</code> angle brackets denote that this is a tag as opposed to actual content and the letters and/or numbers in between determine the type of tag it is (its identifier). In the example above the first line is a level 3 heading (html has 6 levels of heading of differing importance, <code>h1</code> being the most important and <code>h6</code> the least) and the second is a paragraph.</p>
 <p>When the browser comes to process the html file it will see the opening tag (e.g. <code>&lt;h3&gt;</code>) and know that everything following it until the closing tag (e.g. <code>&lt;/h3&gt;</code>) is the same type of content. The backslash <code>/</code> directly following the opening bracket of the second tag denotes that it is a closing, rather than opening, tag.</p>
@@ -219,12 +219,12 @@
 <p>What we have here is a series of <code>li</code> elements, nested inside an <code>ol</code> element. An <code>ol</code> is an ordered list, and <code>li</code> stands for list item. Here the <code>ol</code> is the parent of the <code>li</code> elements, which are in turn siblings of one another.</p>
 <p>When rendered by the browser, the above html will look like this:</p>
 <figure>
-<p>Todo list</p>
-<ol>
-    <li>Wake up</li>
-    <li>Have breakfast</li>
-    <li>Learn more about HTML</li>
-</ol>
+    <p>Todo list</p>
+    <ol>
+        <li>Wake up</li>
+        <li>Have breakfast</li>
+        <li>Learn more about HTML</li>
+    </ol>
 </figure>
 <p>The advantage of being able to form relationships between elements like this is it brings additional context to information. Here we can see that not only are the <code>li</code> elements items in a list, but they are all members of the same list and should be processed in a particular order. Consider another example:</p>
 <pre><code>&lt;p&gt;Todo list&lt;/p&gt;
@@ -242,18 +242,18 @@
 </code></pre>
 <p>Here we have added another list after the first, in this case, however, it is an unordered list, or <code>ul</code>. While we now have 6 <code>li</code> elements, they are not all member's of the same list, and thus should be treated separately. Also, while the second list still represents related items, they do not have any particular ordering associated with them. Here's how the modified example appears when rendered by a browser:</p>
 <figure>
-<p>Todo list</p>
-<ol>
-    <li>Wake up</li>
-    <li>Have breakfast</li>
-    <li>Learn more about HTML</li>
-</ol>
-<p>My favourite foods</p>
-<ul>
-    <li>Pizza</li>
-    <li>Pasta</li>
-    <li>Cake</li>
-</ul>
+    <p>Todo list</p>
+    <ol>
+        <li>Wake up</li>
+        <li>Have breakfast</li>
+        <li>Learn more about HTML</li>
+    </ol>
+    <p>My favourite foods</p>
+    <ul>
+        <li>Pizza</li>
+        <li>Pasta</li>
+        <li>Cake</li>
+    </ul>
 </figure>
 <p>There is no limit to the number of levels that elements can be nested, and most webpages will have a large number of different elements with complex relationships resembling the most well-researched family trees.</p>
 <p>We've covered quite a lot in this chapter, so don't worry if it doesn't all take first time. Even experienced web developers often need to go over new material several times before they fully understand it. As long as you comprehend the principles behind what you've just read you should be fine and shouldn't need to remember the specifics; it will become second nature soon enough.</p>
@@ -592,28 +592,30 @@
 &lt;/table&gt;
 </code></pre>
 <p>This represents a table with 4 rows and 3 columns. As you can see, each <code>tr</code> is a child of the <code>table</code>, and the <code>td</code> elements are children of the <code>tr</code> rows. When displayed on a page it will look like this:</p>
-<table>
-    <tr>
-        <td>Country</td>
-        <td>Population</td>
-        <td>Language</td>
-    </tr>
-    <tr>
-        <td>UK</td>
-        <td>63,182,000</td>
-        <td>English</td>
-    </tr>
-    <tr>
-        <td>France</td>
-        <td>64,898,000</td>
-        <td>Français</td>
-    </tr>
-    <tr>
-        <td>Germany</td>
-        <td>80,219,695</td>
-        <td>Deutsch</td>
-    </tr>
-</table>
+<figure>
+    <table>
+        <tr>
+            <td>Country</td>
+            <td>Population</td>
+            <td>Language</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>63,182,000</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>64,898,000</td>
+            <td>Français</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>80,219,695</td>
+            <td>Deutsch</td>
+        </tr>
+    </table>
+</figure>
 <p>We do not explicitly declare columns in HTML, instead they are inferred from the number of cells in each row. This format can feel extremely unwieldy when you first encounter it but, as mentioned earlier, stems from the difficulty of trying to lay out a grid using markup. If we actually tried to lay out cells in the same way they appear, the browser would have to infer where columns started and ended, which might result in a different layout from what you intended. After you have worked on a few pages with tables you should get the hang of it and it will become second nature.</p>
 <h2><a class="header" href="#table-headings" id="table-headings">Table Headings</a></h2>
 <p>We now have a basic table, but there is still some critical information missing. Someone looking at the table as rendered by the browser may well be able to guess that the top row represents the column headings, but the markup does not convey this; each row, has an identical structure. To remove this ambiguity we can use a <code>th</code> element with a <code>scope</code> attribute, instead of a <code>td</code>, for any headings. Which will make life easier for any machines or screen reader users reading our page. Have a look at the example below:</p>
@@ -642,28 +644,30 @@
 </code></pre>
 <p>What we have done here is to replace all of the <code>td</code> elements in the first row with <code>th</code> elements to define them as the headings for the table columns. The <code>scope</code> attribute must have a value of either <code>col</code> or <code>row</code> to define whether it is acting as a heading for a column or row.</p>
 <p>We have also made the first cell in each of the other rows a heading; this shows that the population and language columns apply to the country, rather than, for example, the UK being the official country of the English language or Deutsch the official language of the number 80,219,695. This might seem unnecessary for people used to languages that read from left to right, as we assume that the first element we see is the most important, but again, this is just about being explicit.  When rendered by a browser our updated table will look like this:</p>
-<table>
-    <tr>
-        <th scope="col">Country</th>
-        <th scope="col">Population</th>
-        <th scope="col">Language</th>
-    </tr>
-    <tr>
-        <th scope="row">UK</th>
-        <td>63,182,000</td>
-        <td>English</td>
-    </tr>
-    <tr>
-        <th scope="row">France</th>
-        <td>64,898,000</td>
-        <td>Français</td>
-    </tr>
-    <tr>
-        <th scope="row">Germany</th>
-        <td>80,219,695</td>
-        <td>Deutsch</td>
-    </tr>
-</table>
+<figure>
+    <table>
+        <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Population</th>
+            <th scope="col">Language</th>
+        </tr>
+        <tr>
+            <th scope="row">UK</th>
+            <td>63,182,000</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <th scope="row">France</th>
+            <td>64,898,000</td>
+            <td>Français</td>
+        </tr>
+        <tr>
+            <th scope="row">Germany</th>
+            <td>80,219,695</td>
+            <td>Deutsch</td>
+        </tr>
+    </table>
+</figure>
 <p>By default, browsers also render the text contained in any <code>th</code> elements in bold, which makes things more obvious for sighted users as well. A win-win situation.</p>
 <h2><a class="header" href="#table-headers-and-bodies" id="table-headers-and-bodies">Table headers and bodies</a></h2>
 <p>There is one final change we are going to make to our example table before we get back to work on our CV page, which again will add a little clarity for anything reading the code. The first row of our table is now composed entirely of <code>th</code> elements, but otherwise looks structurally similar to the other rows. To further differentiate it's component parts, we can split the table into a header and body.</p>

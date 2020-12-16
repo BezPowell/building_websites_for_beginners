@@ -184,28 +184,30 @@
 &lt;/table&gt;
 </code></pre>
 <p>This represents a table with 4 rows and 3 columns. As you can see, each <code>tr</code> is a child of the <code>table</code>, and the <code>td</code> elements are children of the <code>tr</code> rows. When displayed on a page it will look like this:</p>
-<table>
-    <tr>
-        <td>Country</td>
-        <td>Population</td>
-        <td>Language</td>
-    </tr>
-    <tr>
-        <td>UK</td>
-        <td>63,182,000</td>
-        <td>English</td>
-    </tr>
-    <tr>
-        <td>France</td>
-        <td>64,898,000</td>
-        <td>Français</td>
-    </tr>
-    <tr>
-        <td>Germany</td>
-        <td>80,219,695</td>
-        <td>Deutsch</td>
-    </tr>
-</table>
+<figure>
+    <table>
+        <tr>
+            <td>Country</td>
+            <td>Population</td>
+            <td>Language</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>63,182,000</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>64,898,000</td>
+            <td>Français</td>
+        </tr>
+        <tr>
+            <td>Germany</td>
+            <td>80,219,695</td>
+            <td>Deutsch</td>
+        </tr>
+    </table>
+</figure>
 <p>We do not explicitly declare columns in HTML, instead they are inferred from the number of cells in each row. This format can feel extremely unwieldy when you first encounter it but, as mentioned earlier, stems from the difficulty of trying to lay out a grid using markup. If we actually tried to lay out cells in the same way they appear, the browser would have to infer where columns started and ended, which might result in a different layout from what you intended. After you have worked on a few pages with tables you should get the hang of it and it will become second nature.</p>
 <h2><a class="header" href="#table-headings" id="table-headings">Table Headings</a></h2>
 <p>We now have a basic table, but there is still some critical information missing. Someone looking at the table as rendered by the browser may well be able to guess that the top row represents the column headings, but the markup does not convey this; each row, has an identical structure. To remove this ambiguity we can use a <code>th</code> element with a <code>scope</code> attribute, instead of a <code>td</code>, for any headings. Which will make life easier for any machines or screen reader users reading our page. Have a look at the example below:</p>
@@ -234,28 +236,30 @@
 </code></pre>
 <p>What we have done here is to replace all of the <code>td</code> elements in the first row with <code>th</code> elements to define them as the headings for the table columns. The <code>scope</code> attribute must have a value of either <code>col</code> or <code>row</code> to define whether it is acting as a heading for a column or row.</p>
 <p>We have also made the first cell in each of the other rows a heading; this shows that the population and language columns apply to the country, rather than, for example, the UK being the official country of the English language or Deutsch the official language of the number 80,219,695. This might seem unnecessary for people used to languages that read from left to right, as we assume that the first element we see is the most important, but again, this is just about being explicit.  When rendered by a browser our updated table will look like this:</p>
-<table>
-    <tr>
-        <th scope="col">Country</th>
-        <th scope="col">Population</th>
-        <th scope="col">Language</th>
-    </tr>
-    <tr>
-        <th scope="row">UK</th>
-        <td>63,182,000</td>
-        <td>English</td>
-    </tr>
-    <tr>
-        <th scope="row">France</th>
-        <td>64,898,000</td>
-        <td>Français</td>
-    </tr>
-    <tr>
-        <th scope="row">Germany</th>
-        <td>80,219,695</td>
-        <td>Deutsch</td>
-    </tr>
-</table>
+<figure>
+    <table>
+        <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Population</th>
+            <th scope="col">Language</th>
+        </tr>
+        <tr>
+            <th scope="row">UK</th>
+            <td>63,182,000</td>
+            <td>English</td>
+        </tr>
+        <tr>
+            <th scope="row">France</th>
+            <td>64,898,000</td>
+            <td>Français</td>
+        </tr>
+        <tr>
+            <th scope="row">Germany</th>
+            <td>80,219,695</td>
+            <td>Deutsch</td>
+        </tr>
+    </table>
+</figure>
 <p>By default, browsers also render the text contained in any <code>th</code> elements in bold, which makes things more obvious for sighted users as well. A win-win situation.</p>
 <h2><a class="header" href="#table-headers-and-bodies" id="table-headers-and-bodies">Table headers and bodies</a></h2>
 <p>There is one final change we are going to make to our example table before we get back to work on our CV page, which again will add a little clarity for anything reading the code. The first row of our table is now composed entirely of <code>th</code> elements, but otherwise looks structurally similar to the other rows. To further differentiate it's component parts, we can split the table into a header and body.</p>
