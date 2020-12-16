@@ -8,3 +8,4 @@
   - [Basic page structure](./s1c5.md)
   - [Sections](./s1c6.md)
   - [Tables](./s1c7.md)
+  - [Links](./s1c8.md)
