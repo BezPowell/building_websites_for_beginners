@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Forms - Building Websites for Beginners</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li><li class="chapter-item expanded "><a href="s1c5.html"><strong aria-hidden="true">1.4.</strong> Basic page structure</a></li><li class="chapter-item expanded "><a href="s1c6.html"><strong aria-hidden="true">1.5.</strong> Sections</a></li><li class="chapter-item expanded "><a href="s1c7.html"><strong aria-hidden="true">1.6.</strong> Tables</a></li><li class="chapter-item expanded "><a href="s1c8.html"><strong aria-hidden="true">1.7.</strong> Links</a></li><li class="chapter-item expanded "><a href="s1c9.html" class="active"><strong aria-hidden="true">1.8.</strong> Forms</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Building Websites for Beginners</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#forms" id="forms">Forms</a></h1>
+<p>Now that our simple portfolio page contains a table of our previous employments, the only thing left to do is add a way for people to contact us; after all, there is no point wowing prospective employers with our skills and experience if they can not get in touch with us.</p>
+<p>So far, everything that we have added to our page has been to provide the visitor with information, as doing so is often the primary purpose of a HTML document<sup id="a1"><a href="#f1">1</a></sup>. Sometimes, however, you need the information to flow in the other direction, to collect information from the user; and forms in HTML are how you do that. Just like their paper equivalents, they consist of a series of fields that visitors fill in, which when submitted can be read and processed. </p>
+<p>Here, we're using a form to allow visitors to send us a message, but they can be used for almost anything where you need to collect data from the visitor; think website logins, getting driving directions, online checkouts, web search engines etc.</p>
+<h2><a class="header" href="#collecting-data" id="collecting-data">Collecting data</a></h2>
+<p>To create a form in HTML we use the <code>form</code> element, which then accepts a number of different types of elements as children which act as the fields of the form. When a visitor fills in these fields and submits the form, any data they have entered will be sent to whatever url is specified in the form's <code>action</code> attribute. HTML itself can not do anything with the information that users submit, it can only send it to somewhere else for processing.</p>
+<p>This can be very confusing for beginners, as doing anything with the data that users have submitted using your forms requires learning a whole new programming language. However, by decoupling the collection of data from the processing of it, it grants us tremendous flexibility; we can decide whether we want to use that data to log a user in to our website, send them a set of tickets for a particular concert, add their observations to an amateur scientific project, or simple email us a copy of what they entered.</p>
+<p>Learning one of these so called 'backend' languages is out of the scope of this book, but fortunately there are services that can handle ths for us, and we will be using one of these for our simple contact form. Before we start looking at processing the data from a form, however, we first need to look at collecting it.</p>
+<h2><a class="header" href="#inputs" id="inputs">Inputs</a></h2>
+<p>As alluded to earlier, a <code>form</code> element can accept several types of elements as children to act as its fields. The most common of these is the <code>input</code> element, which has a <code>type</code> attribute to define what type of data we are expecting, and a <code>name</code> attribute to identify the field when we come to process the data.</p>
+<p>Users fill out the form by focusing each input in turn to fill them out, and then submitting the form when they have completed it. Focusing an element is often performed by clicking or touching into it with a mouse our touchscreen, but can also be achieved using the <code>tab</code> key on a keyboard to move between them.</p>
+<p>An extremely simple form could be created like so:</p>
+<pre><code>&lt;form action=&quot;https::/example.com&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Here we have defined a simple form with two <code>input</code>s. The first is a text field called name, and the second acts as a button to allow submitting the form. When rendered in a browser it will look something like this:</p>
+<figure>
+    <form action="https::/example.com">
+        <input type="text" name="name" />
+        <input type="submit" value="Submit Form" />        
+    </form>
+</figure>
+<p>When a user clicks (or touches, or presses enter on their keyboard, or any other way of interacting with it) on the button any data they have entered into the name input will be sent to <code>https::/example.com</code>. What is done with the data when it gets there will be entirely dependant on what use the form is trying to serve.</p>
+<h2><a class="header" href="#labels" id="labels">Labels</a></h2>
+<p>Our single field form is already completely functional, but it does not convey to the user what information we are expecting them to give us. For that purpose, HTML has the <code>label</code> element. These accept a <code>for</code> attribute, which contains the <code>id</code> of the element they are associated with, and any content they are given will become the label. In HTML, the <code>id</code> attribute can be applied to any element, and should be a unique identifier for that specific element; normally we don't have a use for these, but in particular circumstances (such as adding a label here) we may need to add one.</p>
+<p>We could add a label to our text <code>input</code> like so:</p>
+<pre><code>&lt;form action=&quot;https::/example.com&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; /&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot; /&gt;        
+&lt;/form&gt;
+</code></pre>
+<p>and when rendered by the browser it would look like this:</p>
+<figure>
+    <form action="https::/example.com">
+        <label for="name">Your name</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Submit Form" />        
+    </form>
+</figure>
+<p>Labels are extremely useful, as the text of a <code>label</code> associated with an <code>input</code> is read out to screen-reader users when they focus on the input. Also, if users click or touch the label it will automatically move focus to the input, ready to enter data.</p>
+<h2><a class="header" href="#other-field-types" id="other-field-types">Other field types</a></h2>
+<p>So far, we have only seen a plain text field, but HTML supports many other types of inputs. The <code>input</code> element itself supports many different values for its <code>type</code> attribute, including: <code>number</code>, <code>email</code>, <code>password</code>, <code>color</code>, <code>date</code> and <code>file</code> etc. By specifying the correct type of input the browser will change how they are presented to the user (such as a date picker for the date field, or increment and decrement arrows on numbers) and will perform some basic validation on the inputs to ensure the user has entered the right kind of data (checking that a valid email address was entered, or only a number into a number field for example).</p>
+<h3><a class="header" href="#selects" id="selects">Selects</a></h3>
+<p>In addition to the <code>input</code> element, there are also a few other types of element that can be used as fields. An example of this is the <code>select</code> element, which has one or more <code>option</code> elements as children; the contents of which provide the items in a drop-down list. We could create a select field for booking tickets to events like this:</p>
+<pre><code>&lt;form action=&quot;/booking&quot;&gt;
+    &lt;label for=&quot;ticket-type&quot;&gt;Type of ticket:&lt;/label&gt;
+    &lt;select name=&quot;ticket-type&quot; id =&quot;ticket-type&quot;&gt;
+        &lt;option value=&quot;standing&quot;&gt;Standing&lt;/option&gt;
+        &lt;option value=&quot;box&quot;&gt;Box&lt;/option&gt;
+        &lt;option value=&quot;backstage&quot;&gt;Backstage Pass&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/form&gt;
+</code></pre>
+<p>Ordinarily, the value of a field when the form is submitted will be whatever data the user entered, but in the case of a <code>select</code> element it will be the <code>value</code> attribute of the selected <code>option</code>. When rendered by the browser the above form would appear like this:</p>
+<figure>
+    <form action="/booking">
+        <label for="ticket-type">Type of ticket:</label>
+        <select name="ticket-type" id ="ticket-type">
+            <option value="standing">Standing</option>
+            <option value="box">Box</option>
+            <option value="backstage">Backstage Pass</option>
+        </select>
+    </form>
+</figure>
+<h3><a class="header" href="#textareas" id="textareas">Textareas</a></h3>
+<p>The text input used in our first example form only works for a single line of text, such as a name or message subject. For multi-line fields we instead use a <code>textarea</code>. Just like an <code>input</code> the <code>textarea</code> should have an associated <code>label</code> and can have the number of allowed characters restricted using a <code>minlength</code> and <code>maxlength</code> attribute. Unlike <code>input</code>s, however, a <code>textarea</code> is not self-closing and must have a closing tag like so:</p>
+<pre><code>&lt;textarea&gt;
+&lt;/textarea&gt;
+</code></pre>
+<p>There are many other possible children allowed for a <code>form</code> element that I have not covered here. A good reference for all of them, and the attributes they can accept, is on <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls">MDN</a>.</p>
+<h2><a class="header" href="#building-a-contact-form" id="building-a-contact-form">Building a contact form</a></h2>
+<p>Now that we know how to create a form in HTMl, we are ready to add one to our page. For processing any data submitted to the form I used an online service called <a href="https://getform.io/">getform.io</a><sup id="a2"><a href="#f2">2</a></sup>. It is a paid service, but at the time of writing they have a free plan where you can add a single form and accept up to 50 submissions a month.</p>
+<p>Generally, any external service must be thoroughly checked for security and how they handle your data, but for the purposes of testing it should be fine. If you happen to be experienced in any of the backend languages that can be used to process form data feel free to write that part yourself.</p>
+<p>First of all, let's add the contact form to our portfolio page. Insert the following lines after the last <code>section</code> and before the closing <code>main</code> tag:</p>
+<pre><code>&lt;section&gt;
+    &lt;h2&gt;Get in touch&lt;/h2&gt;
+    &lt;form action=&quot;https://getform.io/f/921c2467-5918-4ddd-88e5-ee8f7674034d&quot; method=&quot;POST&quot;&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;name&quot;&gt;Your Name:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;email&quot;&gt;Your Email:&lt;/label&gt;
+            &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required=&quot;true&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;subject&quot;&gt;Subject:&lt;/label&gt;
+            &lt;input type=&quot;text&quot; name=&quot;subject&quot; id=&quot;subject&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;
+            &lt;textarea name=&quot;message&quot; id=&quot;message&quot; required=&quot;true&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;button type=&quot;submit&quot;&gt;Send&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/section&gt;
+</code></pre>
+<p>As before we have added a new <code>section</code> element to hold our contact form. The <code>form</code> itself has an action url pointing to whatever page will process our data. In the case of the example this is my test form on getform.io, but you will need to replace it with the url that is unique to your form. The <code>method=&quot;POST&quot;</code> attribute is indicating that this form's data should be sent with a <code>POST</code>, rather than a <code>GET</code>, request. The differences between the two are a little complex to worry about for now<sup id="a3"><a href="#f3">3</a></sup> but, essentially, a <code>POST</code> request is more secure; what you want when sending any form of personal information. </p>
+<p>By default, <code>inputs</code> and <code>labels</code> are both inline elements, and I have wrapped them in simple <code>div</code> tags to separate them out. A <code>div</code> is a semantically meaningless block level element that can be used to group elements when no other specific elements are appropriate.</p>
+<p>The only other thing which is new in this example is the addition of the <code>required</code> attribute to the email and message fields. Any fields that are marked as <code>required</code> will prevent the user from submitting the form if they are empty and the browser will display a message indicating that they should be filled in. Please use these judiciously as they can be confusing to users, but insisting that a contact form must have a message and way of getting back in touch with the user seems reasonable.</p>
+<p>The only other thing to do now is to setup the form processing. If you decide to use the same service as myself they have some good <a href="https://app.getform.io/docs">documentation on how to do this</a>. Essentially, all you want to do is create a new form, copy the action url into the <code>action</code> attribute of the <code>form</code> on your portfolio page, and setup an email notification. Their documentation covers all of this.</p>
+<p>If you decide you would like to process the data in another way feel free to do so.</p>
+<h2><a class="header" href="#wrapping-up" id="wrapping-up">Wrapping up</a></h2>
+<p>Now that the contact form has been added, the HTML for our basic portfolio page is complete. If you run into any issues, or just want to see what my version looks like, you can get the <a href="https://github.com/BezPowell/building_websites_for_beginners/blob/master/code/s1c9/index.html">page's source code on github</a>.</p>
+<p>We've covered a huge amount over the last nine chapters, and if there is something you are still unsure of please do go back and read it again. The best way to learn is by doing, so do try putting your new skills to the test by making some other webpages. Perhaps you could try making a basic news article, or recipe for cooking your favourite dish?</p>
+<p>The main thing to writing good HTML is using appropriate elements for the content. As there are more elements available than can be comfortably remembered a good reference is essential, and perhaps the best is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>; they also have some excellent tutorials that explain many of the concepts we have covered in greater depth.</p>
+<p>In the next section we will look at CSS. Another language of the web that allows us to change the visual display of web pages.</p>
+<h3><a class="header" href="#footnotes" id="footnotes">Footnotes</a></h3>
+<ol class="footnotes">
+    <li id="f1">Think about how many pages consist of things to read / watch, versus those asking you to enter information.</li>
+    <li id="f2">I am in no way affiliated with this company. Their service just seemed like the easiest way of allowing you to see your form was working without teaching you a whole different language.</li>
+    <li id="f3">If you are interested you can <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">read more about it here.</a></li>
+</ol>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="s1c8.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="s1c8.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
