@@ -167,23 +167,23 @@
 <p>As alluded to earlier, a <code>form</code> element can accept several types of elements as children to act as its fields. The most common of these is the <code>input</code> element, which has a <code>type</code> attribute to define what type of data we are expecting, and a <code>name</code> attribute to identify the field when we come to process the data.</p>
 <p>Users fill out the form by focusing each input in turn to fill them out, and then submitting the form when they have completed it. Focusing an element is often performed by clicking or touching into it with a mouse our touchscreen, but can also be achieved using the <code>tab</code> key on a keyboard to move between them.</p>
 <p>An extremely simple form could be created like so:</p>
-<pre><code>&lt;form action=&quot;https::/example.com&quot;&gt;
+<pre><code>&lt;form action=&quot;https://example.com&quot;&gt;
     &lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;
     &lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot; /&gt;
 &lt;/form&gt;
 </code></pre>
 <p>Here we have defined a simple form with two <code>input</code>s. The first is a text field called name, and the second acts as a button to allow submitting the form. When rendered in a browser it will look something like this:</p>
 <figure>
-    <form action="https::/example.com">
+    <form action="https://example.com">
         <input type="text" name="name" />
         <input type="submit" value="Submit Form" />        
     </form>
 </figure>
-<p>When a user clicks (or touches, or presses enter on their keyboard, or any other way of interacting with it) on the button any data they have entered into the name input will be sent to <code>https::/example.com</code>. What is done with the data when it gets there will be entirely dependant on what use the form is trying to serve.</p>
+<p>When a user clicks (or touches, or presses enter on their keyboard, or any other way of interacting with it) on the button any data they have entered into the name input will be sent to <code>https://example.com</code>. What is done with the data when it gets there will be entirely dependant on what use the form is trying to serve.</p>
 <h2><a class="header" href="#labels" id="labels">Labels</a></h2>
 <p>Our single field form is already completely functional, but it does not convey to the user what information we are expecting them to give us. For that purpose, HTML has the <code>label</code> element. These accept a <code>for</code> attribute, which contains the <code>id</code> of the element they are associated with, and any content they are given will become the label. In HTML, the <code>id</code> attribute can be applied to any element, and should be a unique identifier for that specific element; normally we don't have a use for these, but in particular circumstances (such as adding a label here) we may need to add one.</p>
 <p>We could add a label to our text <code>input</code> like so:</p>
-<pre><code>&lt;form action=&quot;https::/example.com&quot;&gt;
+<pre><code>&lt;form action=&quot;https://example.com&quot;&gt;
     &lt;label for=&quot;name&quot;&gt;Your name&lt;/label&gt;
     &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; /&gt;
     &lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot; /&gt;        
@@ -191,7 +191,7 @@
 </code></pre>
 <p>and when rendered by the browser it would look like this:</p>
 <figure>
-    <form action="https::/example.com">
+    <form action="https://example.com">
         <label for="name">Your name</label>
         <input type="text" name="name" id="name" />
         <input type="submit" value="Submit Form" />        
