@@ -177,10 +177,10 @@
 <p>Similarly, if you have followed along with the tutorials and have any feedback on what you found helpfull, or areas that could be improved please send me an email to <a href="mailto:bez@pinopticon.net">bez@pinopticon.net</a> with any comments or criticisms you have. Hopefully, together we can make this book better for everyone who reads it.</p>
 <p>Finally, if you have found these tutorials useful in any way and have some pennies to spare you can also <a href="https://github.com/sponsors/BezPowell">sponsor me using github sponsors</a> or <a href="https://www.patreon.com/bezpowell">patreon</a> which will allow me to dedicate more time to working on the book.</p>
 <h3><a class="header" href="#footnotes" id="footnotes">Footnotes</a></h3>
-<ol class="footnotes">
-<li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
-<li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
-<li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
+<ol>
+    <li id="f1">There is also a second, dark ulterior motive to the writing of this which is to refine my own skills. It is often said that the best way of improving your understanding of a subject is to try and teach it to others; little do my readers realize that they are merely pawns in my ascendency to figurative web development godhood.... ahem.</li>
+    <li id="f2">In web development, as in most other things in life, there is definitely more than one way to skin a cat and there is generally no one 'best' way of achieving something. What I will cover is (hopefully) a good way of doing things using contemporary technologies.</li>
+    <li id="f3"> This must be an actual text editor such as notepad as opposed to a word processor such as Microsoft Word as word processors add additional formatting to documents which will prevent webpages from working correctly.</li>
 </ol>
 <hr />
 <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
@@ -300,9 +300,9 @@
 <h2><a class="header" href="#body-content" id="body-content">Body content</a></h2>
 <p>The other child of the <code>html</code> element is the <code>body</code> element and, as alluded to above, includes the actual content of the page. For now we just have a <code>h1</code> element with the content &quot;Hello World!&quot;. Try changing this text, or adding in some of the elements we covered in the last section and refreshing the page in the browser to see how adding elements to the body changes what the browser displays; make sure you remember to save the text document though, otherwise the changes you make will not be rendered. </p>
 <h3><a class="header" href="#footnotes-1" id="footnotes-1">Footnotes</a></h3>
-<ol class="footnotes">
-<li id="f1">HTML has gone through several major revisions in its history, each one adding (and occasionally removing) features.</li>
-<li id="f2">The lang attribute can also be added to other elements on the page where you have text in multiple languages. Where this is the case, try and set the html lang attribute to the one used for the majority of the page and use lang on other elements where they differ from the main content. For a list of all the languages that the attribute have a look at the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">HTML Language Code Reference</a> on w3schools..</li>
+<ol>
+    <li id="f1">HTML has gone through several major revisions in its history, each one adding (and occasionally removing) features.</li>
+    <li id="f2">The lang attribute can also be added to other elements on the page where you have text in multiple languages. Where this is the case, try and set the html lang attribute to the one used for the majority of the page and use lang on other elements where they differ from the main content. For a list of all the languages that the attribute have a look at the <a href="https://www.w3schools.com/tags/ref_language_codes.asp">HTML Language Code Reference</a> on w3schools..</li>
 </ol><h1><a class="header" href="#starting-the-first-website" id="starting-the-first-website">Starting the first website</a></h1>
 <p>Now that we have seen how html documents are structured we can start building our first webpage. For the rest of this section we will expand upon our knowledge of HTML by building a simple portfolio page, adding sections to it as we learn about some of the different types of elements that are available to use. Then, in the next section on CSS, we will add some styling to make the page more visually interesting. By the end of the CSS section we should have a completed webpage that looks a bit like this:</p>
 <p><img src="./images/s1c4/Desktop_styled.jpg" alt="Our first website viewed on a computer" /></p>
@@ -317,9 +317,9 @@
 <p>Please don't let this put you off. It might not look like much, but it will be the solid foundations from which you can build an amazing website. Before you know it you will have also got the hang of CSS and will be building useful <em>and</em> beautiful websites.</p>
 <p>That's enough talking from me, let's get our hands dirty with some more HTML.</p>
 <h3><a class="header" href="#footnotes-2" id="footnotes-2">Footnotes</a></h3>
-<ol class="footnotes">
-<li id="f1">Though there are many others such as turning links into buttons, or even using images for text.</li>
-<li id="f2">I really do apologise for going on so much about this topic. Rants like this will be kept to an absolute minimum I promise.</li>
+<ol>
+    <li id="f1">Though there are many others such as turning links into buttons, or even using images for text.</li>
+    <li id="f2">I really do apologise for going on so much about this topic. Rants like this will be kept to an absolute minimum I promise.</li>
 </ol><h1><a class="header" href="#basic-page-structure" id="basic-page-structure">Basic page structure</a></h1>
 <p>In this chapter we're going to begin work on the initial html structure of our first website. The core purpose of any html document<sup id="a1"><a href="s1c5.html#f1">1</a></sup> is to convey information; whether that is the particulars of a breaking news story, the recipe to cook a certain dish, or even the various prices and specifications of different products that visitors might like to purchase. If you look at a selection of different pages from across the web, however, you may notice that they frequently contain a lot more than just this core content. This very often takes the form of elements which are shared across the site, such as a header with navigation and the site logo, or a footer with copyright information, but can also be supporting information more specific to the page, such as a sidebar with a list of related posts.</p>
 <p>As all of this ancillary information is separate from the main page content, we want to contain it in different elements in order to differentiate it. First things first, though, we need to create our new project. Typing out the required elements of a page every time you start a new project can become quite tedious and error prone, fortunately, we already created a minimal page that we can use as a starting point in Chapter 3. Copy <code>hello_world.html</code> into a new folder that will contain all the files for our current project<sup id="a2"><a href="s1c5.html#f2">2</a></sup> and rename it to <code>index.html</code>.</p>
@@ -410,7 +410,7 @@
 <p><img src="./images/s1c5/first_page.jpg" alt="This chapter's code viewed in Firefox." /></p>
 <p>In the next chapter we will start work on the main page content.</p>
 <h3><a class="header" href="#footnotes-3" id="footnotes-3">Footnotes</a></h3>
-<ol class="footnotes">
+<ol>
     <li id="f1">In HTML terminology a page is referred to as a document.</li>
     <li id="f2">Mine is called website_1_final, but you probably want to name it something a bit more friendly such as 'My Portfolio' for something similar.</li>
     <li id="f3">e.g. the homepage of a website called example.com would be a file called index.html in a folder named example.com. The contact page would also be called index.html, but would be located in a sub-folder of example.com named contact.</li>
@@ -811,7 +811,7 @@
 <p>Now that we know how to add hyperlinks to documents, and understand that that can only be the parents of certain elements, we can add the employer website hyperlinks to our table. As this is such a minor change, I will not show you what to do and will ask you to have a go at doing it yourselves. Remember that you can look at <a href="https://github.com/BezPowell/building_websites_for_beginners/blob/master/code/s1c8/index.html">this chapter's source code</a> if you get stuck.</p>
 <p>In the next chapter we will look at forms, which allow visitors to interact with your website.</p>
 <h3><a class="header" href="#footnotes-4" id="footnotes-4">Footnotes</a></h3>
-<ol class="footnotes">
+<ol>
     <li id="f1">The strong element stands for Strong Importance, and is used to mark content out as having particular importance or urgency.</li>
     <li id="f2">The document's writing mode is generally determined by the language set in the html lang attribute, but can be overridden on an element by element basis.</li>
     <li id="f3">ol and ul elements may only have li as children, for example.</li>
@@ -928,7 +928,7 @@
 <p>The main thing to writing good HTML is using appropriate elements for the content. As there are more elements available than can be comfortably remembered a good reference is essential, and perhaps the best is the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>; they also have some excellent tutorials that explain many of the concepts we have covered in greater depth.</p>
 <p>In the next section we will look at CSS. Another language of the web that allows us to change the visual display of web pages.</p>
 <h3><a class="header" href="#footnotes-5" id="footnotes-5">Footnotes</a></h3>
-<ol class="footnotes">
+<ol>
     <li id="f1">Think about how many pages consist of things to read / watch, versus those asking you to enter information.</li>
     <li id="f2">I am in no way affiliated with this company. Their service just seemed like the easiest way of allowing you to see your form was working without teaching you a whole different language.</li>
     <li id="f3">If you are interested you can <a href="https://www.w3schools.com/tags/ref_httpmethods.asp">read more about it here.</a></li>
