@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="520"
+   height="170"
+   viewBox="0 0 137.58334 44.979168"
+   version="1.1"
+   id="svg8"
+   style="background-color:white;"
+   sodipodi:docname="url.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1835"
+     inkscape:window-height="1136"
+     id="namedview855"
+     showgrid="false"
+     inkscape:zoom="1.4519231"
+     inkscape:cx="260"
+     inkscape:cy="85"
+     inkscape:window-x="85"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+     x="2.4780929"
+     y="25.950989"
+     id="text835"><tspan
+       id="tspan833"
+       x="2.4780929"
+       y="25.950989"
+       style="stroke-width:0.264583"><tspan
+   style="fill:#800000"
+   id="tspan953">https</tspan>://<tspan
+   style="fill:#000080"
+   id="tspan955">www.google.com</tspan><tspan
+   style="fill:#008000"
+   id="tspan957">/</tspan></tspan></text>
+  <path
+     id="rect837"
+     style="fill:none;stroke:#000000;stroke-width:0.541887;stroke-linecap:round;stroke-linejoin:round"
+     d="m 133.87307,28.42334 v 8.5738 H 3.710255 v -8.5738" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+     x="62.233921"
+     y="43.484749"
+     id="text842"><tspan
+       id="tspan840"
+       x="62.233921"
+       y="43.484749"
+       style="font-size:6.35px;stroke-width:0.264583">URL</tspan></text>
+  <path
+     id="rect837-3"
+     style="fill:none;stroke:#800000;stroke-width:0.541888;stroke-linecap:round;stroke-linejoin:round"
+     d="M 28.568904,15.52254 V 6.94874 H 3.710254 v 8.5738" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:4.7625px;line-height:1.25;font-family:sans-serif;fill:#800000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+     x="6.5331883"
+     y="5.5520473"
+     id="text842-6"><tspan
+       id="tspan840-7"
+       x="6.5331883"
+       y="5.5520473"
+       style="font-size:4.7625px;fill:#800000;stroke-width:0.264583">Protocol</tspan></text>
+  <path
+     id="rect837-3-5"
+     style="fill:none;stroke:#008000;stroke-width:0.541888;stroke-linecap:round;stroke-linejoin:round"
+     d="m 133.87311,15.52254 v -8.5738 h -3.16282 v 8.5738" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:4.7625px;line-height:1.25;font-family:sans-serif;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+     x="124.08654"
+     y="5.5520473"
+     id="text842-6-3"><tspan
+       id="tspan840-7-5"
+       x="124.08654"
+       y="5.5520473"
+       style="font-size:4.7625px;fill:#008000;stroke-width:0.264583">Path</tspan></text>
+  <path
+     id="rect837-3-6"
+     style="fill:none;stroke:#000080;stroke-width:0.541888;stroke-linecap:round;stroke-linejoin:round"
+     d="M 129.37515,15.52254 V 6.94874 H 41.016504 v 8.5738" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:4.7625px;line-height:1.25;font-family:sans-serif;fill:#000080;fill-opacity:1;stroke:none;stroke-width:0.264583"
+     x="68.066643"
+     y="5.5520473"
+     id="text842-6-2"><tspan
+       id="tspan840-7-9"
+       x="68.066643"
+       y="5.5520473"
+       style="font-size:4.7625px;fill:#000080;stroke-width:0.264583">Domain Name</tspan></text>
+</svg>
