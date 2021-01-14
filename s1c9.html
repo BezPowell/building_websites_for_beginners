@@ -262,6 +262,15 @@
 <p>The only other thing which is new in this example is the addition of the <code>required</code> attribute to the email and message fields. Any fields that are marked as <code>required</code> will prevent the user from submitting the form if they are empty and the browser will display a message indicating that they should be filled in. Please use these judiciously as they can be confusing to users, but insisting that a contact form must have a message and way of getting back in touch with the user seems reasonable.</p>
 <p>The only other thing to do now is to setup the form processing. If you decide to use the same service as myself they have some good <a href="https://app.getform.io/docs">documentation on how to do this</a>. Essentially, all you want to do is create a new form, copy the action url into the <code>action</code> attribute of the <code>form</code> on your portfolio page, and setup an email notification. Their documentation covers all of this.</p>
 <p>If you decide you would like to process the data in another way feel free to do so.</p>
+<h2><a class="header" href="#footer-links" id="footer-links">Footer links</a></h2>
+<p>As a final change I have also added <code>mailto:</code> and <code>tel:</code> links to the page's footer in case the form does not work, or users would prefer to contact us directly. Do this at your discretion, as bots can sometimes get hold of an email and send spam emails. It is often a good idea to add additional contact methods to a site, however, as not everyone uses email or finds filling in forms convenient.</p>
+<p>The updated footer code is below:</p>
+<pre><code>&lt;footer&gt;
+    &lt;p&gt;Copyright &amp;copy; Catwaladr Caractapus&lt;/p&gt;
+    Email: &lt;a href=&quot;mailto:hello@example.com&quot;&gt;hello@example.com&lt;/a&gt;
+    Telephone: &lt;a href=&quot;tel:07000000000&quot;&gt;07000 000 000&lt;/a&gt;
+&lt;/footer&gt;
+</code></pre>
 <h2><a class="header" href="#wrapping-up" id="wrapping-up">Wrapping up</a></h2>
 <p>Now that the contact form has been added, the HTML for our basic portfolio page is complete. If you run into any issues, or just want to see what my version looks like, you can get the <a href="https://github.com/BezPowell/building_websites_for_beginners/blob/master/code/s1c9/index.html">page's source code on github</a>.</p>
 <p>We've covered a huge amount over the last nine chapters, and if there is something you are still unsure of please do go back and read it again. The best way to learn is by doing, so do try putting your new skills to the test by making some other webpages. Perhaps you could try making a basic news article, or recipe for cooking your favourite dish?</p>
