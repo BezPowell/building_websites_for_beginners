@@ -12,4 +12,4 @@
   - [Forms](./s1c9.md)
 - [CSS](./s2c1.md)
   - [Selectors and Rulesets](./s2c2.md)
-  - [Classes and the Cascade](./s2c3.md)
+  - [Classes and Combinators](./s2c3.md)
