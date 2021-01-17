@@ -12,3 +12,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.contrast-section {
+    background-color: #00c2ca;
+    color: #000011;
+}
