@@ -1,0 +1,23 @@
+body {
+    background-color: #1c0b08;
+    color: #00c2ca;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+a {
+    color: #43bce9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contrast-section {
+    background-color: #00c2ca;
+    color: #000011;
+}
+
+.contrast-section a {
+    color: #242424;
+}
