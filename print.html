@@ -92,7 +92,7 @@
 
     <nav id="sidebar" class="sidebar" aria-label="Table of contents">
         <div class="sidebar-scrollbox">
-            <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li><li class="chapter-item expanded "><a href="s1c5.html"><strong aria-hidden="true">1.4.</strong> Basic page structure</a></li><li class="chapter-item expanded "><a href="s1c6.html"><strong aria-hidden="true">1.5.</strong> Sections</a></li><li class="chapter-item expanded "><a href="s1c7.html"><strong aria-hidden="true">1.6.</strong> Tables</a></li><li class="chapter-item expanded "><a href="s1c8.html"><strong aria-hidden="true">1.7.</strong> Links</a></li><li class="chapter-item expanded "><a href="s1c9.html"><strong aria-hidden="true">1.8.</strong> Forms</a></li></ol></li><li class="chapter-item expanded "><a href="s2c1.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s2c2.html"><strong aria-hidden="true">2.1.</strong> Selectors and Rulesets</a></li></ol></li></ol>
+            <ol class="chapter"><li class="chapter-item expanded affix "><a href="s0.html">Introduction</a></li><li class="chapter-item expanded "><a href="s1c1.html"><strong aria-hidden="true">1.</strong> HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s1c2.html"><strong aria-hidden="true">1.1.</strong> Tags and Elements</a></li><li class="chapter-item expanded "><a href="s1c3.html"><strong aria-hidden="true">1.2.</strong> Hello world</a></li><li class="chapter-item expanded "><a href="s1c4.html"><strong aria-hidden="true">1.3.</strong> Starting the first website</a></li><li class="chapter-item expanded "><a href="s1c5.html"><strong aria-hidden="true">1.4.</strong> Basic page structure</a></li><li class="chapter-item expanded "><a href="s1c6.html"><strong aria-hidden="true">1.5.</strong> Sections</a></li><li class="chapter-item expanded "><a href="s1c7.html"><strong aria-hidden="true">1.6.</strong> Tables</a></li><li class="chapter-item expanded "><a href="s1c8.html"><strong aria-hidden="true">1.7.</strong> Links</a></li><li class="chapter-item expanded "><a href="s1c9.html"><strong aria-hidden="true">1.8.</strong> Forms</a></li></ol></li><li class="chapter-item expanded "><a href="s2c1.html"><strong aria-hidden="true">2.</strong> CSS</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="s2c2.html"><strong aria-hidden="true">2.1.</strong> Selectors and Rulesets</a></li><li class="chapter-item expanded "><a href="s2c3.html"><strong aria-hidden="true">2.2.</strong> Classes and Combinators</a></li></ol></li></ol>
         </div>
         <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
     </nav>
@@ -1096,6 +1096,169 @@ li {
     <li id="f1">CSS uses the American spelling of the word. For those of you, like myself, who are used to the British spelling this can be very confusing at first. Unfortunately, we are stuck with it this way, but you soon should be able to switch between the two in your head with little difficulty.</li>
     <li id="f2">Each browser has its own default stylesheet that applies to all elements until a document overrides those styles with its own. These stylesheets are a little different for each browser, so an unstyled element may appear a little differently for visitors using different browsers.</li>
     <li id="f3">As the body is the ancestor for all elements rendered on the page, all elements will inherit from it.</li>
+</ol><h1><a class="header" href="#classes-and-combinators" id="classes-and-combinators">Classes and Combinators</a></h1>
+<p>Now that we have seen the basics of how CSS files work, we can start applying some styling to our page. To load a stylesheet from a HTML document we use a <code>link</code> element in the document <code>head</code>, which has a <code>href</code> attribute to define the URL of the link destination.</p>
+<p>The <code>link</code> element is used to define relationships between the document and other resources, these are usually external stylesheets, but can be other types of file as well. As a result of this, <code>link</code>s also require a <code>rel</code> attribute to tell the browser the type of file they are linking to<sup id="a1"><a href="s2c3.html#f1">1</a></sup>.</p>
+<p>Open the <code>index.html</code> file from the previous section in a text editor, and add the following lines to the <code>head</code>:</p>
+<pre><code>&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+…
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot; /&gt;
+
+…
+    &lt;title&gt;My website&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<p>As you can see we have added a <code>link</code> element with a <code>rel</code> of <code>stylesheet</code>, with a <code>href</code> pointing to <code>./style.css</code>. If we now create a file called <code>style.css</code> in the same folder as <code>index.html</code>, any CSS rulesets that we add to it will be applied to our page.</p>
+<h2><a class="header" href="#meta-viewport" id="meta-viewport">Meta viewport</a></h2>
+<p>We have also added a new <code>meta</code> tag to our document's head. This has a <code>name</code> of <code>viewport</code>, and quite a complicated <code>content</code> attribute. When mobile devices first began to appear websites were often designed only to be viewed on a desktop, and content that was too wide could be lost off the edges of a user's screen. To counteract this, mobile browsers started zooming a page out so that everything was on screen; users could them zoom in to the piece of the page that they were interested in and pan around to view content.</p>
+<p>While useful for viewing websites that cater only for desktop users on a mobile device, this behaviour can hinder us in creating a page to work across all forms of devices. The new <code>meta</code> element added to the page counteracts this behaviour by instructing the browser that the page width should be equal to the device's screen width, and it should initially appear without being zoomed in or out.</p>
+<h2><a class="header" href="#adding-some-colour" id="adding-some-colour">Adding some colour</a></h2>
+<figure>
+    <img src="./images/s1c4/Desktop_styled.jpg" alt="Page with final styles applied, showing different colours from the browser defaults." />
+    <figure>
+        The page as it will appear when we have finished styling it.
+    </figure>
+</figure>
+If you look again at the screenshot of the completed page from Chapter 4, you will see that the colours are rather different from the browser's default white background and black text. As we know how to change the colour of text from the previous chapter, we can start making some changes straight away:
+<pre><code>body {
+    background-color: #1c0b08;
+    color: #00c2ca;
+    font-family: &quot;Arial Black&quot;, &quot;Arial Bold&quot;, Gadget, sans-serif;
+}
+</code></pre>
+<p>The <code>background-color</code> property is very similar to the <code>color</code> property, but instead of setting the text colour of an element, it instead sets the colour of the element's background. We have also changed the <code>font-family</code> property to ensure it is a little more consistent across browsers and operating systems.</p>
+<p>Black text on a white background, owing to its hight contrast-ratio<sup id="a2"><a href="s2c3.html#f2">2</a></sup>, does have the advantage that it is very easy to read, especially when your page is being viewed in sub-optimal conditions, such as bright sunlight. Any colour scheme that we choose for our sites should also take this into account. Fortunately, there is a international standard for web accessibility called <abbr title="Web Content Accessibility Guidelines">WCAG</abbr><sup id="a3"><a href="s2c3.html#f3">3</a></sup>, which includes a section on colour contrast, you can read more about that on the <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">official website</a>, there are also <a href="https://contrastchecker.com/">automated checking tools</a> available to help with this.</p>
+<h3><a class="header" href="#colouring-anchors" id="colouring-anchors">Colouring anchors</a></h3>
+<p>If you refresh the browser you should see that our page is beginning to look a lot more like the screenshot. If you scroll all the way down to the bottom, however, you may notice a problem: the links are not following the new colour scheme.</p>
+<figure>
+    <img src="./images/s2c3/Old_links.png" alt="Default blue links on modified black background next to teal text." />
+    <figcaption>
+        By default links are set to a value of "color:blue;".
+    </figcaption>
+</figure>
+<p>In order to differentiate links from ordinary text, browser's set them to have a <code>color</code> of <code>blue</code>, in contrast to <code>black</code> for other text. What this means for our stylesheet is that, because they don't have a value of <code>inherit</code>, links will not use the <code>color</code> set on the page <code>body</code>. We can override this behaviour, of course, by making a unique ruleset for links.</p>
+<p>We could set the <code>color</code> property on links to <code>inherit</code> so they behave in the same way as other elements, but that would remove a visual indicator for users and make it harder to tell them apart.
+Visitors to websites expect links to be a different colour from the body text (as well as having an underline), and if we change that behaviour it can make using our sites more difficult; especially for those with poorer eyesight or some form of cognitive impairment.</p>
+<p>Instead, we are going to replace the colour with something that is easier to read against our dark background, but still different from the main body text.</p>
+<pre><code>a {
+    color: #43bce9;
+}
+</code></pre>
+<p>If you refresh your browser again the links should now appear like this:</p>
+<figure>
+    <img src="./images/s2c3/New_links.png" alt="Overridden blue links." />
+    <figcaption>
+        Page links with overridden style.
+    </figcaption>
+</figure>
+<h2><a class="header" href="#classes" id="classes">Classes</a></h2>
+<p>The design for the page shows some sections with the colours swapped, using the background colour for text, and vice versa. However, all of the sections on our page are created using the same <code>section</code> element, so how can write a selector that targets only some of them? One way to do this is through classes.</p>
+<p>Classes are additional attributes that can be added to html elements, and then specifically targeted in CSS. To add a class to an element we use the <code>class</code> attribute. This takes one or more class names, separated by spaces, like so:</p>
+<pre><code>&lt;p class=&quot;class1 class2 class3&quot;&gt;Some text&lt;/p&gt;
+</code></pre>
+<p>The <code>p</code> element in the example above has a <code>class</code> attribute with the value <code>class1 class2 class3</code>, and thus has three separate classes; <code>class1</code>, <code>class2</code>, and <code>class3</code>.</p>
+<p>Class names must be composed of letters, numbers, hyphens (-), or underscores (_); though the first character can not be a number, and if it begins with a hyphen the next character must be a letter or underscore. Generally, I find it easiest to just use letters, with underscores to replace spaces if I want to use more than one word in a single name, but use whatever system works best for you.</p>
+<h3><a class="header" href="#class-selector" id="class-selector">Class selector</a></h3>
+<p>Up until now, all of our rulesets have used what are known as element selectors; formed by simply typing the name of the element, followed by the rule block. If we are to simply replace that with the name of a class (e.g. <code>class2 {}</code>), the browser would assume that we were trying to select a type of element, even if it is not one that is defined in the HTML specifications.</p>
+<p>To indicate that we want to select a class, we must use a <code>class selector</code> by prefixing the class name with a full-stop (.) like so:</p>
+<pre><code>.class2 {
+    color: red;
+}
+</code></pre>
+<p>This ruleset will then target all elements that have a class of <code>class2</code>. The way class selectors work is that any element that has a matching class will have the styles applied, regardless of which order its classes are defined, or how many it has. So, to return to our previous example, the <code>p</code> element would match this selector, despite its class attribute being <code>class=&quot;class1 class2 class3&quot;</code>, as <code>class2</code> is one of the names it has specified.</p>
+<h2><a class="header" href="#styling-the-sections" id="styling-the-sections">Styling the sections</a></h2>
+<p>Using classes we can now style the alternate colour sections. Go through the page html and add a <code>class=&quot;contrast-section&quot;</code> attribute to each section that you want to have a different colour scheme. Once the attributes are there, we can add the follwing ruleset to our stylesheet:</p>
+<pre><code>.contrast-section {
+    background-color: #00c2ca;
+    color: #000011;
+}
+</code></pre>
+<p>If you refresh the page now you should see that only the sections with a class added have changed their colour scheme. There are, however, two problems: the background colour doesn't go all the way to the edge of the screen as it does in the design, and any links on the coloured sections are almost invisible.</p>
+<figure>
+    <img src="./images/s2c3/Old_section.png" alt="Light blue links almost invisible on darker blue background." />
+    <figcaption>
+        Links are now almost invisible on the coloured sections.
+    </figcaption>
+</figure>
+<p>The gap between the edge of the section and the page is due to some of the browser's default styling. We will fix this in a later chapter when we explore sizing elements in CSS.</p>
+<p>As we have just used a new class to change the background of certain sections, we might be tempted to correct the link colours by adding a different class to all of the effected <code>a</code> elements; but correcting the colour in this way would require that we remember to add the class to any additional links we add at a later date, or remove the class if we change the colour of the section in the future.</p>
+<p>To avoid inflicting this additional maintenance burden on our future selves we can instead utilise another feature of CSS: combinators.</p>
+<h2><a class="header" href="#combinators" id="combinators">Combinators</a></h2>
+<p>Combinators, as the name suggests, allow us to combine different selectors together. By using combinators, we can write selectors that - instead of selecting all elements of a certain type, or that have a certain class - have a particular structure in the document.</p>
+<h3><a class="header" href="#descendant-combinator" id="descendant-combinator">Descendant combinator</a></h3>
+<p>This might sound a little confusing, so let's look at an example using one of the most common combinators: the decendant combinator, represented by a space (<code> </code>):</p>
+<pre><code>ul li {
+    color: red;
+}
+</code></pre>
+<p>What the above selector does is target any <code>li</code> elements that are descended from an <code>ul</code> element. Selectors in CSS start from the right, and work their way leftwards; at each combinator the browser checks whether the relationship that it describes applies when continuing to the left, and stops if that is not the case.</p>
+<p>We can chain up as many combinators as we like in a selector, with the relationship that it describes getting more specific as the selector grows larger.</p>
+<p>Let's look at another example:</p>
+<pre><code>.special-list ul li {
+    color: purple;
+}
+</code></pre>
+<p>In this case our selector is still looking for <code>li</code> elements that are descendants of a <code>ul</code>, but now it will only apply if the <code>ul</code> is in turn descended from an element with the class of <code>special-list</code>. As we have seen from styling classes and elements, selectors also apply on a case by case basis; so if we had two <code>special-list</code> elements, both with <code>ul</code>s, then the <code>li</code> elements in all of them would become purple.</p>
+<h3><a class="header" href="#child-combinator" id="child-combinator">Child combinator</a></h3>
+<p>Similar to the descendant combinator, is the child combinator, represented by an right angle bracket <code>&gt;</code>. The child combinator, however, only applies if the element to the right of it is directly descended from the element to the left. If we were to modify the previous example like so:</p>
+<pre><code>.special-list &gt; ul li {
+    color: purple;
+}
+</code></pre>
+<p>Now the ruleset will only apply if the <code>ul</code> is a child of an element with the <code>special-list</code> class. If the spacing between the two elements is any more than a single generation the ruleset will cease to apply, like with the HTML below:</p>
+<pre><code>&lt;div class=&quot;special=list&quot;&gt;
+    &lt;p&gt;This is the first special list&lt;/p&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;These are the&lt;/li&gt;
+            &lt;li&gt;First list&lt;/li&gt;
+            &lt;li&gt;items&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;special=list&quot;&gt;
+    &lt;p&gt;This is the second special list&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;These are the&lt;/li&gt;
+        &lt;li&gt;second list&lt;/li&gt;
+        &lt;li&gt;items&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>With the above HTML our descendant combinator ruleset would apply to all the <code>li</code> elements, but the version using the child combinator would not apply to the <code>li</code>s in the first list, as their parent <code>ul</code> is not a child of the special-list, only a descendant.</p>
+<p>The child and descendant combinators are the most frequently used, but there are a few others available as well, including two for selecting sibling elements. MDN has a good <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">list of combinators</a>, as well as details on how they work.</p>
+<h2><a class="header" href="#correcting-the-link-colour" id="correcting-the-link-colour">Correcting the link colour</a></h2>
+<p>Using the descendant combinator we can ensure that all <code>a</code> elements that are descendants of a <code>contrast-section</code> have a color which is readable against the background:</p>
+<pre><code>.contrast-section a {
+    color: #242424;
+}
+</code></pre>
+<p>By using a combinator here we have ensured that any links will have a legible colour, without us having to assign them all classes. Additionally, if we decide to remove the class from the section for any reason, the links will remain legible against the body without us having to make any further changes.</p>
+<p>As with the standard link colour I have here selected one that is different from the surrounding text, but still legible against the background:</p>
+<figure>
+    <img src="./images/s2c3/New_section.png" alt="Dark grey links legible against a blue background." />
+    <figcaption>
+        Links should now be legible against the coloured sections.
+    </figcaption>
+</figure>
+<h2><a class="header" href="#wrapping-up-4" id="wrapping-up-4">Wrapping up</a></h2>
+<p>We have covered a tremendous amount of ground in this chapter, much of it concepts that we have not really encountered previously; so don't be worried if you find yourself struggling to remember everything or having to re-read some parts; this is far more likely due to my failings as a teacher than something on your end.</p>
+<p>If you have got this far and are wondering how exactly the browser chooses one color declaration for links above the other, well done! This selection process is handled by the <code>cascade</code> part of Cascading Style Sheets, and we will be examining that in the next chapter.</p>
+<h3><a class="header" href="#footnotes-9" id="footnotes-9">Footnotes</a></h3>
+<ol>
+    <li id="f1">
+        When loading a page the browser can only download so many files in parallel, and uses the type of file to assign a loading priority. As CSS files effect how the browser should render the page, they are assigned a higher priority than most other resources to ensure the page is usable as quickly as possible. If we did not define the filetype in the link attribute, the browser would have to first download the file to determine its type, losing this advantage.
+    </li>
+    <li id="f2">
+        <p>The contrast-ratio is the difference in luminance (or lightness) between the colour of text and background. As many people are colour-blind or have low-colour vision, this calculation deliberately does not take into account the differences in hue (or colour). As a result, some colour combinations that might look very different, can in fact have quite low contrast-ratios owing to their similar luminance levels.</p>
+        <p>Generally speaking, the higher the contrast, the easier it is to read; especially for those with poorer eyesight. Unfortunately, this is not always the case, and certain people (such as many with dyslexia) actually find low-contrast easier to read as it creates less visual stress. I generally try and aim for a colour combination that meets the WCAG AAA criteria, but isn't as high contrast as pure black on white.</p>
+    </li>
+    <li id="f3">
+        WCAG covers far more than just colour-contrast and has guides and standards for pretty much every area of building websites. By following their standards for your own websites you ensure that as many people as possible, regardless of their level of ability, can use what you create. It can sound quite daunting at first, but often just stems down to using the right HTML element for the job, and thinking how you would interact with what you're building if you couldn't use a particular input device, or couldn't perceive things through a particular sense.
+    </li>
 </ol>
                         <footer style="border-top:1px solid;padding-top:1em;">
                             <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
